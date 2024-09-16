@@ -925,10 +925,10 @@ td {
   position: relative;
 }
 .xptf-btn:hover, .xptf-btn:focus {
-  background: #1a1b1e;
+  background: #eac76f;
 }
 .xptf-btn.xptf-btn-dark {
-  background: #1a1b1e;
+  background: #eac76f;
 }
 .xptf-btn.xptf-btn-dark:hover, .xptf-btn.xptf-btn-dark:focus {
   background: #fd85b2;
