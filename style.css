@@ -3385,11 +3385,12 @@ object {
 }
 .xp-heading > span.is_highlight {
   background: #fd85b2;
-  padding: 2px 10px;
-  border: 1px solid #fd85b2;
-  -webkit-border-radius: 15px;
-  -moz-border-radius: 15px;
-  border-radius: 15px;
+  padding: 3px 20px;
+  border: 0px solid #fd85b2;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+  clip-path: polygon(100% 0%, calc(100% - 0.75rem) 50%, 100% 100%, 0 100%, 0.75rem 50%, 0 0);
 }
 .xp-heading > span.is_line {
   padding-left: 60px;
