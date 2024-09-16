@@ -891,30 +891,6 @@ td {
   background: #fd85b2;
 }
 
-.elementor-icon {
-  display:flex !important;
-}
-.main-navigation > ul > li::before {
-  display:none;
-}
-.main-navigation > ul > li > a {
-  padding:0px 0;
-}
-
-.site-header {
-  background: transparent; }
-
-
-.xp-heading > span.is_highlight {
-  padding: 3px 20px;
-  border: 0;
-  border-radius: 0;
-  clip-path: polygon(100% 0%, calc(100% - 0.75rem) 50%, 100% 100%, 0 100%, 0.75rem 50%, 0 0);
-}
-
-.page-header {
-  background-position: center bottom;
-}
 /*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
