@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Restimo
+ * @package CreamPoint
  */
 
 ?>
@@ -23,7 +23,7 @@
     <?php if( $format == 'gallery' ) { ?>
 
         <div class="entry-media">
-            <?php restimo_posted_in(); ?>
+            <?php creampoint_posted_in(); ?>
             <div class="gallery-post owl-carousel owl-theme">
             <?php if( function_exists( 'rwmb_meta' ) ) { ?>
                 <?php $images = rwmb_meta( 'post_gallery', array( 'size' =>'full' ) ); ?>
@@ -41,7 +41,7 @@
     <?php }elseif( $format == 'image' ) { ?>
 
         <div class="entry-media">
-        <?php restimo_posted_in(); ?>
+        <?php creampoint_posted_in(); ?>
         <?php if( function_exists( 'rwmb_meta' ) ) { ?>
             <?php $images = rwmb_meta( 'post_image', array( 'size' =>'full' ) ); ?>
             <?php if($images){ ?>              
@@ -63,7 +63,7 @@
     <?php }elseif( $format == 'video' ){ ?>
 
         <div class="entry-media">
-            <?php restimo_posted_in(); ?>
+            <?php creampoint_posted_in(); ?>
             <?php if( function_exists( 'rwmb_meta' ) ) { ?>
                 <?php $images = rwmb_meta( 'bg_video', array( 'size' =>'full' ) ); ?>
                 <?php if($images){ ?>     
@@ -99,7 +99,7 @@
     <?php }elseif ( has_post_thumbnail() ) { ?>
 
         <div class="entry-media">
-            <?php restimo_posted_in(); ?>
+            <?php creampoint_posted_in(); ?>
             <a href="<?php the_permalink(); ?>">
                 <?php the_post_thumbnail(); ?>
             </a>
@@ -108,12 +108,12 @@
     <?php } ?>
 
     <div class="inner-post <?php if( !has_post_thumbnail() ) echo 'no-ptop'; ?>">
-        <?php if( $format != 'gallery' && $format != 'image' && $format != 'video' && !has_post_thumbnail() ) restimo_posted_in(); ?>
+        <?php if( $format != 'gallery' && $format != 'image' && $format != 'video' && !has_post_thumbnail() ) creampoint_posted_in(); ?>
         <div class="entry-header">
             <div class="entry-meta">
-                <?php if( restimo_get_option( 'post_entry_meta' ) ) { restimo_post_meta(); } ?>
+                <?php if( creampoint_get_option( 'post_entry_meta' ) ) { creampoint_post_meta(); } ?>
             </div>
-            <?php if( restimo_get_option( 'ptitle_post' ) ) the_title( '<h4 class="entry-title">', '</h4>' ); ?>
+            <?php if( creampoint_get_option( 'ptitle_post' ) ) the_title( '<h4 class="entry-title">', '</h4>' ); ?>
 
         </div>
 
@@ -124,7 +124,7 @@
                 the_content(sprintf(
                     wp_kses(
                     /* translators: %s: Name of current post. Only visible to screen readers */
-                        __('Continue reading<span class="screen-reader-text"> "%s"</span>', 'restimo'),
+                        __('Continue reading<span class="screen-reader-text"> "%s"</span>', 'creampoint'),
                         array(
                             'span' => array(
                                 'class' => array(),
@@ -135,18 +135,18 @@
                 ));
 
                 wp_link_pages(array(
-                    'before' => '<div class="page-links">' . esc_html__('Pages:', 'restimo'),
+                    'before' => '<div class="page-links">' . esc_html__('Pages:', 'creampoint'),
                     'after' => '</div>',
                 ));
             ?>
 
         </div>
         <div class="entry-footer clearfix">
-            <?php restimo_entry_footer(); ?>
+            <?php creampoint_entry_footer(); ?>
         </div>
-        <?php if( restimo_get_option('author_box') ) restimo_author_info_box(); ?>
-        <?php if( restimo_get_option('post_nav') ) restimo_single_post_nav(); ?>
-        <?php if( restimo_get_option('related_post') ) restimo_related_posts(); ?>
+        <?php if( creampoint_get_option('author_box') ) creampoint_author_info_box(); ?>
+        <?php if( creampoint_get_option('post_nav') ) creampoint_single_post_nav(); ?>
+        <?php if( creampoint_get_option('related_post') ) creampoint_related_posts(); ?>
     </div>
 
 </article>

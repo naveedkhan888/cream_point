@@ -4,10 +4,10 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package Restimo
+ * @package CreamPoint
  */
 
-if ( restimo_get_layout() === 'full-content' ) {
+if ( creampoint_get_layout() === 'full-content' ) {
 	return;
 }
 

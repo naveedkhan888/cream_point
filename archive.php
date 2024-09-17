@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Restimo
+ * @package CreamPoint
  */
 
 get_header(); ?>
@@ -12,8 +12,8 @@ get_header(); ?>
 <div class="entry-content">
 	<div class="container">
 		<div class="row">
-			<div id="primary" class="content-area <?php restimo_content_columns(); ?>">
-				<main id="main" class="site-main <?php restimo_blog_style(); ?>">
+			<div id="primary" class="content-area <?php creampoint_content_columns(); ?>">
+				<main id="main" class="site-main <?php creampoint_blog_style(); ?>">
 
 				<?php if ( have_posts() ) : ?>
 
@@ -31,7 +31,7 @@ get_header(); ?>
 
 					endwhile;
 
-						restimo_posts_navigation();
+						creampoint_posts_navigation();
 
 					else :
 

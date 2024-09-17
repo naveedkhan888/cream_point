@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measu
 /**
  * Widget Name: Client Logos
  */
-class Restimo_Image_Carousel extends Widget_Base{
+class CreamPoint_Image_Carousel extends Widget_Base{
 
  	// The get_name() method is a simple one, you just need to return a widget name that will be used in the code.
 	public function get_name() {
@@ -14,7 +14,7 @@ class Restimo_Image_Carousel extends Widget_Base{
 
 	// The get_title() method, which again, is a very simple one, you need to return the widget title that will be displayed as the widget label.
 	public function get_title() {
-		return __( 'XP Client Logos', 'restimo' );
+		return __( 'XP Client Logos', 'creampoint' );
 	}
 
 	// The get_icon() method, is an optional but recommended method, it lets you set the widget icon. you can use any of the eicon or font-awesome icons, simply return the class name as a string.
@@ -24,7 +24,7 @@ class Restimo_Image_Carousel extends Widget_Base{
 
 	// The get_categories method, lets you set the category of the widget, return the category name as a string.
 	public function get_categories() {
-		return [ 'category_restimo' ];
+		return [ 'category_creampoint' ];
 	}
 
 	protected function register_controls() {
@@ -32,7 +32,7 @@ class Restimo_Image_Carousel extends Widget_Base{
 		$this->start_controls_section(
 			'content_section',
 			[
-				'label' => __( 'Logos', 'restimo' ),
+				'label' => __( 'Logos', 'creampoint' ),
 			]
 		);
 
@@ -40,15 +40,15 @@ class Restimo_Image_Carousel extends Widget_Base{
 		$repeater->add_control(
 			'title',
 			[
-				'label' => __( 'Name', 'restimo' ),
+				'label' => __( 'Name', 'creampoint' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => __( '', 'restimo' ),
+				'default' => __( '', 'creampoint' ),
 			]
 		);
 		$repeater->add_control(
 			'image_partner',
 			[
-				'label' => __( 'Image', 'restimo' ),
+				'label' => __( 'Image', 'creampoint' ),
 				'type' => Controls_Manager::MEDIA,
 				'default' => [
 					'url' => Utils::get_placeholder_image_src(),
@@ -58,7 +58,7 @@ class Restimo_Image_Carousel extends Widget_Base{
 		$repeater->add_control(
 			'image_link',
 			[
-				'label' => __( 'Link', 'restimo' ),
+				'label' => __( 'Link', 'creampoint' ),
 				'type' => Controls_Manager::URL,
 				'default' => [],
 			]
@@ -90,10 +90,10 @@ class Restimo_Image_Carousel extends Widget_Base{
 		$this->add_responsive_control(
 			'tshow',
 			[
-				'label' => __( 'Slides To Show', 'restimo' ),
+				'label' => __( 'Slides To Show', 'creampoint' ),
 				'type' => Controls_Manager::SELECT,
 				'options' => [
-					'' => __( 'Default', 'restimo' ),
+					'' => __( 'Default', 'creampoint' ),
 				] + $slides_show,
 				'default' => ''
 			]
@@ -102,31 +102,31 @@ class Restimo_Image_Carousel extends Widget_Base{
 		$this->add_control(
 			'loop',
 			[
-				'label' => __( 'Loop', 'restimo' ),
+				'label' => __( 'Loop', 'creampoint' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'true',
 				'options' => [
-					'true' => __( 'Yes', 'restimo' ),
-					'false' => __( 'No', 'restimo' ),
+					'true' => __( 'Yes', 'creampoint' ),
+					'false' => __( 'No', 'creampoint' ),
 				]
 			]
 		);
 		$this->add_control(
 			'autoplay',
 			[
-				'label' => __( 'Autoplay', 'restimo' ),
+				'label' => __( 'Autoplay', 'creampoint' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'true',
 				'options' => [
-					'true' => __( 'Yes', 'restimo' ),
-					'false' => __( 'No', 'restimo' ),
+					'true' => __( 'Yes', 'creampoint' ),
+					'false' => __( 'No', 'creampoint' ),
 				]
 			]
 		);
 		$this->add_control(
 			'timeout',
 			[
-				'label' => __( 'Autoplay Timeout', 'restimo' ),
+				'label' => __( 'Autoplay Timeout', 'creampoint' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -146,24 +146,24 @@ class Restimo_Image_Carousel extends Widget_Base{
 		$this->add_control(
 			'arrows',
 			[
-				'label' => __( 'Arrows', 'restimo' ),
+				'label' => __( 'Arrows', 'creampoint' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'false',
 				'options' => [
-					'true'   => __( 'Yes', 'restimo' ),
-					'false'  => __( 'No', 'restimo' ),
+					'true'   => __( 'Yes', 'creampoint' ),
+					'false'  => __( 'No', 'creampoint' ),
 				],
 			]
 		);
 		$this->add_control(
 			'dots',
 			[
-				'label' => __( 'Dots', 'restimo' ),
+				'label' => __( 'Dots', 'creampoint' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'true',
 				'options' => [
-					'true'   => __( 'Yes', 'restimo' ),
-					'false'  => __( 'No', 'restimo' ),
+					'true'   => __( 'Yes', 'creampoint' ),
+					'false'  => __( 'No', 'creampoint' ),
 				],
 			]
 		);
@@ -175,26 +175,26 @@ class Restimo_Image_Carousel extends Widget_Base{
 		$this->start_controls_section(
 			'image_style_section',
 			[
-				'label' => __( 'Style Logos', 'restimo' ),
+				'label' => __( 'Style Logos', 'creampoint' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
 		$this->add_responsive_control(
 			'align',
 			[
-				'label' => __( 'Vertical Align', 'restimo' ),
+				'label' => __( 'Vertical Align', 'creampoint' ),
 				'type' => Controls_Manager::CHOOSE,
 				'options' => [
 					'flex-start'    => [
-						'title' => __( 'Top', 'restimo' ),
+						'title' => __( 'Top', 'creampoint' ),
 						'icon' => 'eicon-v-align-top',
 					],
 					'center' => [
-						'title' => __( 'Center', 'restimo' ),
+						'title' => __( 'Center', 'creampoint' ),
 						'icon' => 'eicon-v-align-middle',
 					],
 					'flex-end' => [
-						'title' => __( 'Bottom', 'restimo' ),
+						'title' => __( 'Bottom', 'creampoint' ),
 						'icon' => 'eicon-v-align-bottom',
 					],
 				],
@@ -207,7 +207,7 @@ class Restimo_Image_Carousel extends Widget_Base{
 		$this->add_responsive_control(
 			'img_height',
 			[
-				'label' => __( 'Height', 'restimo' ),
+				'label' => __( 'Height', 'creampoint' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -228,7 +228,7 @@ class Restimo_Image_Carousel extends Widget_Base{
 		$this->add_responsive_control(
 			'img_spacing',
 			[
-				'label' => __( 'Spacing', 'restimo' ),
+				'label' => __( 'Spacing', 'creampoint' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -247,14 +247,14 @@ class Restimo_Image_Carousel extends Widget_Base{
 
 		$this->start_controls_tab( 'normal',
 			[
-				'label' => __( 'Normal', 'restimo' ),
+				'label' => __( 'Normal', 'creampoint' ),
 			]
 		);
 
 		$this->add_control(
 			'opacity',
 			[
-				'label' => __( 'Opacity', 'restimo' ),
+				'label' => __( 'Opacity', 'creampoint' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -281,14 +281,14 @@ class Restimo_Image_Carousel extends Widget_Base{
 
 		$this->start_controls_tab( 'img_hover_effects',
 			[
-				'label' => __( 'Hover', 'restimo' ),
+				'label' => __( 'Hover', 'creampoint' ),
 			]
 		);
 
 		$this->add_control(
 			'opacity_hover',
 			[
-				'label' => __( 'Opacity', 'restimo' ),
+				'label' => __( 'Opacity', 'creampoint' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -321,7 +321,7 @@ class Restimo_Image_Carousel extends Widget_Base{
 		$this->start_controls_section(
 			'navigation_section',
 			[
-				'label' => __( 'Dots', 'restimo' ),
+				'label' => __( 'Dots', 'creampoint' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 				'condition' => [
 					'dots' => 'true',
@@ -332,7 +332,7 @@ class Restimo_Image_Carousel extends Widget_Base{
 		$this->add_responsive_control(
 			'dots_spacing',
 			[
-				'label' => __( 'Spacing', 'restimo' ),
+				'label' => __( 'Spacing', 'creampoint' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -349,7 +349,7 @@ class Restimo_Image_Carousel extends Widget_Base{
 		$this->add_control(
             'dots_bgcolor',
             [
-                'label' => __( 'Color', 'restimo' ),
+                'label' => __( 'Color', 'creampoint' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
 					'{{WRAPPER}} .owl-dots button.owl-dot span' => 'background: {{VALUE}};',
@@ -360,7 +360,7 @@ class Restimo_Image_Carousel extends Widget_Base{
         $this->add_control(
             'dots_active_bgcolor',
             [
-                'label' => __( 'Color Active', 'restimo' ),
+                'label' => __( 'Color Active', 'creampoint' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
 					'{{WRAPPER}} .owl-dots button.owl-dot.active span' => 'background: {{VALUE}};',
@@ -374,7 +374,7 @@ class Restimo_Image_Carousel extends Widget_Base{
 		$this->start_controls_section(
 			'style_nav',
 			[
-				'label' => __( 'Arrows', 'restimo' ),
+				'label' => __( 'Arrows', 'creampoint' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 				'condition' => [
 					'arrows' => 'true',
@@ -384,7 +384,7 @@ class Restimo_Image_Carousel extends Widget_Base{
 		$this->add_control(
 			'arrow_color',
 			[
-				'label' => __( 'Color', 'restimo' ),
+				'label' => __( 'Color', 'creampoint' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -395,7 +395,7 @@ class Restimo_Image_Carousel extends Widget_Base{
 		$this->add_control(
 			'arrow_hcolor',
 			[
-				'label' => __( 'Color Hover', 'restimo' ),
+				'label' => __( 'Color Hover', 'creampoint' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -406,7 +406,7 @@ class Restimo_Image_Carousel extends Widget_Base{
 		$this->add_control(
 			'arrow_bg_color',
 			[
-				'label' => __( 'Background', 'restimo' ),
+				'label' => __( 'Background', 'creampoint' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -417,7 +417,7 @@ class Restimo_Image_Carousel extends Widget_Base{
 		$this->add_control(
 			'arrow_bg_hcolor',
 			[
-				'label' => __( 'Background Hover', 'restimo' ),
+				'label' => __( 'Background Hover', 'creampoint' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -428,7 +428,7 @@ class Restimo_Image_Carousel extends Widget_Base{
 		$this->add_control(
 			'radius_arrow',
 			[
-				'label' => __( 'Border Radius', 'restimo' ),
+				'label' => __( 'Border Radius', 'creampoint' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -519,5 +519,5 @@ class Restimo_Image_Carousel extends Widget_Base{
 	}
 
 }
-// After the Restimo_Image_Carousel class is defined, I must register the new widget class with Elementor:
-Plugin::instance()->widgets_manager->register( new Restimo_Image_Carousel() );
+// After the CreamPoint_Image_Carousel class is defined, I must register the new widget class with Elementor:
+Plugin::instance()->widgets_manager->register( new CreamPoint_Image_Carousel() );

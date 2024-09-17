@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measu
 /**
  * Widget Name: Menu_Mobile
  */
-class Restimo_Menu_Mobile extends Widget_Base{
+class CreamPoint_Menu_Mobile extends Widget_Base{
 
  	// The get_name() method is a simple one, you just need to return a widget name that will be used in the code.
 	public function get_name() {
@@ -14,7 +14,7 @@ class Restimo_Menu_Mobile extends Widget_Base{
 
 	// The get_title() method, which again, is a very simple one, you need to return the widget title that will be displayed as the widget label.
 	public function get_title() {
-		return __( 'XP Menu Mobile', 'restimo' );
+		return __( 'XP Menu Mobile', 'creampoint' );
 	}
 
 	// The get_icon() method, is an optional but recommended method, it lets you set the widget icon. you can use any of the eicon or font-awesome icons, simply return the class name as a string.
@@ -24,7 +24,7 @@ class Restimo_Menu_Mobile extends Widget_Base{
 
 	// The get_categories method, lets you set the category of the widget, return the category name as a string.
 	public function get_categories() {
-		return [ 'category_restimo_header' ];
+		return [ 'category_creampoint_header' ];
 	}
 
 	protected function register_controls() {
@@ -32,7 +32,7 @@ class Restimo_Menu_Mobile extends Widget_Base{
 		$this->start_controls_section(
 			'content_section',
 			[
-				'label' => __( 'Menu', 'restimo' ),
+				'label' => __( 'Menu', 'creampoint' ),
 			]
 		);
 
@@ -40,7 +40,7 @@ class Restimo_Menu_Mobile extends Widget_Base{
 		$this->add_control(
 			'nav_menu',
 			[
-				'label' => esc_html__( 'Select Menu', 'restimo' ),
+				'label' => esc_html__( 'Select Menu', 'creampoint' ),
 				'type' => Controls_Manager::SELECT,
 				'multiple' => false,
 				'options' => $menus,
@@ -53,12 +53,12 @@ class Restimo_Menu_Mobile extends Widget_Base{
 		$this->add_control(
 			'pos_menu',
 			[
-				'label' => __( 'Position', 'restimo' ),
+				'label' => __( 'Position', 'creampoint' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'on-right',
 				'options' => [
-					'on-left' 	=> __( 'On Left', 'restimo' ),
-					'on-right'  => __( 'On Right', 'restimo' ),
+					'on-left' 	=> __( 'On Left', 'creampoint' ),
+					'on-right'  => __( 'On Right', 'creampoint' ),
 				]
 			]
 		);
@@ -69,14 +69,14 @@ class Restimo_Menu_Mobile extends Widget_Base{
 		$this->start_controls_section(
 			'style_icon_section',
 			[
-				'label' => __( 'Icon', 'restimo' ),
+				'label' => __( 'Icon', 'creampoint' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
 		$this->add_control(
 			'icon_color',
 			[
-				'label' => __( 'Icon Color', 'restimo' ),
+				'label' => __( 'Icon Color', 'creampoint' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -87,7 +87,7 @@ class Restimo_Menu_Mobile extends Widget_Base{
 		$this->add_control(
 			'icon_size',
 			[
-				'label' => __( 'Icon Size', 'restimo' ),
+				'label' => __( 'Icon Size', 'creampoint' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -106,14 +106,14 @@ class Restimo_Menu_Mobile extends Widget_Base{
 		$this->start_controls_section(
 			'style_mmenu_section',
 			[
-				'label' => __( 'Menu', 'restimo' ),
+				'label' => __( 'Menu', 'creampoint' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
 		$this->add_control(
 			'bg_mmenu',
 			[
-				'label' => __( 'Background', 'restimo' ),
+				'label' => __( 'Background', 'creampoint' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -124,7 +124,7 @@ class Restimo_Menu_Mobile extends Widget_Base{
 		$this->add_control(
 			'color_mmenu',
 			[
-				'label' => __( 'Text Color', 'restimo' ),
+				'label' => __( 'Text Color', 'creampoint' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -135,7 +135,7 @@ class Restimo_Menu_Mobile extends Widget_Base{
 		$this->add_control(
 			'bcolor_mmenu',
 			[
-				'label' => __( 'Border Color', 'restimo' ),
+				'label' => __( 'Border Color', 'creampoint' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -153,7 +153,7 @@ class Restimo_Menu_Mobile extends Widget_Base{
 		$this->add_control(
 			'color_back',
 			[
-				'label' => __( 'Back Button Color', 'restimo' ),
+				'label' => __( 'Back Button Color', 'creampoint' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -206,5 +206,5 @@ class Restimo_Menu_Mobile extends Widget_Base{
 	}
 
 }
-// After the Restimo_Menu_Mobile class is defined, I must register the new widget class with Elementor:
-Plugin::instance()->widgets_manager->register( new Restimo_Menu_Mobile() );
+// After the CreamPoint_Menu_Mobile class is defined, I must register the new widget class with Elementor:
+Plugin::instance()->widgets_manager->register( new CreamPoint_Menu_Mobile() );

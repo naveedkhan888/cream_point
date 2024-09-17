@@ -13,7 +13,7 @@ class XP_Image_Box_Food extends Widget_Base {
     }
 
     public function get_title() {
-        return __( 'XP Image Box Food', 'restimo' );
+        return __( 'XP Image Box Food', 'creampoint' );
     }
 
     public function get_icon() {
@@ -21,33 +21,33 @@ class XP_Image_Box_Food extends Widget_Base {
     }
 
     public function get_categories() {
-        return [ 'category_restimo' ];
+        return [ 'category_creampoint' ];
     }
 
     protected function register_controls() {
         $this->start_controls_section(
             'content_section',
             [
-                'label' => __( 'Image Box', 'restimo' ),
+                'label' => __( 'Image Box', 'creampoint' ),
             ]
         );
 
         $this->add_responsive_control(
             'align',
             [
-                'label' => __( 'Alignment', 'restimo' ),
+                'label' => __( 'Alignment', 'creampoint' ),
                 'type' => Controls_Manager::CHOOSE,
                 'options' => [
                     'left'    => [
-                        'title' => __( 'Left', 'restimo' ),
+                        'title' => __( 'Left', 'creampoint' ),
                         'icon' => 'eicon-text-align-left',
                     ],
                     'center' => [
-                        'title' => __( 'Center', 'restimo' ),
+                        'title' => __( 'Center', 'creampoint' ),
                         'icon' => 'eicon-text-align-center',
                     ],
                     'right' => [
-                        'title' => __( 'Right', 'restimo' ),
+                        'title' => __( 'Right', 'creampoint' ),
                         'icon' => 'eicon-text-align-right',
                     ]
                 ],
@@ -60,7 +60,7 @@ class XP_Image_Box_Food extends Widget_Base {
         $this->add_control(
             'image_box',
             [
-                'label' => esc_html__( 'Image Box', 'restimo' ),
+                'label' => esc_html__( 'Image Box', 'creampoint' ),
                 'type'  => Controls_Manager::MEDIA,
                 'default' => [
                     'url' => Utils::get_placeholder_image_src(),
@@ -81,16 +81,16 @@ class XP_Image_Box_Food extends Widget_Base {
         $this->add_control(
             'title',
             [
-                'label' => __( 'Title', 'restimo' ),
+                'label' => __( 'Title', 'creampoint' ),
                 'type' => Controls_Manager::TEXTAREA,
-                'default' => __( 'Marketing Research', 'restimo' ),
+                'default' => __( 'Marketing Research', 'creampoint' ),
             ]
         );
 
         $this->add_control(
             'header_size',
             [
-                'label' => __( 'Title HTML Tag', 'restimo' ),
+                'label' => __( 'Title HTML Tag', 'creampoint' ),
                 'type' => Controls_Manager::SELECT,
                 'options' => [
                     'h1' => 'H1',
@@ -112,16 +112,16 @@ class XP_Image_Box_Food extends Widget_Base {
             [
                 'label' => 'Description',
                 'type' => Controls_Manager::TEXTAREA,
-                'default' => __( 'Analysis of the market as a whole and its particular components (competitors, consumers, product, etc.)', 'restimo' ),
+                'default' => __( 'Analysis of the market as a whole and its particular components (competitors, consumers, product, etc.)', 'creampoint' ),
             ]
         );
 
         $this->add_control(
             'link',
             [
-                'label' => __( 'Link', 'restimo' ),
+                'label' => __( 'Link', 'creampoint' ),
                 'type' => Controls_Manager::URL,
-                'placeholder' => __( 'https://your-link.com', 'restimo' ),
+                'placeholder' => __( 'https://your-link.com', 'creampoint' ),
                 'default' => [
                     'url' => '#'
                 ],
@@ -133,7 +133,7 @@ class XP_Image_Box_Food extends Widget_Base {
             [
                 'label' => 'Label Button',
                 'type' => Controls_Manager::TEXT,
-                'default' => __( 'Explore More', 'restimo' ),
+                'default' => __( 'Explore More', 'creampoint' ),
                 'label_block' => true,
                 'condition' => [
                     'link[url]!' => '',
@@ -145,9 +145,9 @@ class XP_Image_Box_Food extends Widget_Base {
         $this->add_control(
             'price',
             [
-                'label' => __( 'Price', 'restimo' ),
+                'label' => __( 'Price', 'creampoint' ),
                 'type' => Controls_Manager::TEXT,
-                'default' => __( '99.99', 'restimo' ),
+                'default' => __( '99.99', 'creampoint' ),
                 'label_block' => true,
             ]
         );
@@ -159,7 +159,7 @@ class XP_Image_Box_Food extends Widget_Base {
         $this->start_controls_section(
             'style_content_section',
             [
-                'label' => __( 'Content', 'restimo' ),
+                'label' => __( 'Content', 'creampoint' ),
                 'tab'   => Controls_Manager::TAB_STYLE,
             ]
         );
@@ -168,7 +168,7 @@ class XP_Image_Box_Food extends Widget_Base {
         $this->add_control(
             'heading_general',
             [
-                'label' => __( 'General', 'restimo' ),
+                'label' => __( 'General', 'creampoint' ),
                 'type' => Controls_Manager::HEADING,
             ]
         );
@@ -176,7 +176,7 @@ class XP_Image_Box_Food extends Widget_Base {
         $this->add_control(
             'box_bg',
             [
-                'label' => __( 'Background', 'restimo' ),
+                'label' => __( 'Background', 'creampoint' ),
                 'type' => Controls_Manager::COLOR,
                 'default' => '',
                 'selectors' => [
@@ -188,7 +188,7 @@ class XP_Image_Box_Food extends Widget_Base {
         $this->add_responsive_control(
             'box_padding',
             [
-                'label' => __( 'Padding Box', 'restimo' ),
+                'label' => __( 'Padding Box', 'creampoint' ),
                 'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => [ 'px', 'em', '%' ],
                 'selectors' => [
@@ -200,7 +200,7 @@ class XP_Image_Box_Food extends Widget_Base {
         $this->add_control(
             'radius_box',
             [
-                'label' => __( 'Border Radius', 'restimo' ),
+                'label' => __( 'Border Radius', 'creampoint' ),
                 'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => [ 'px', '%' ],
                 'selectors' => [
@@ -221,7 +221,7 @@ class XP_Image_Box_Food extends Widget_Base {
         $this->add_control(
             'heading_title',
             [
-                'label' => __( 'Title', 'restimo' ),
+                'label' => __( 'Title', 'creampoint' ),
                 'type' => Controls_Manager::HEADING,
                 'separator' => 'before',
             ]
@@ -230,7 +230,7 @@ class XP_Image_Box_Food extends Widget_Base {
         $this->add_responsive_control(
             'title_space',
             [
-                'label' => __( 'Spacing', 'restimo' ),
+                'label' => __( 'Spacing', 'creampoint' ),
                 'type' => Controls_Manager::SLIDER,
                 'range' => [
                     'px' => [
@@ -247,7 +247,7 @@ class XP_Image_Box_Food extends Widget_Base {
         $this->add_control(
             'title_color',
             [
-                'label' => __( 'Color', 'restimo' ),
+                'label' => __( 'Color', 'creampoint' ),
                 'type' => Controls_Manager::COLOR,
                 'default' => '',
                 'selectors' => [
@@ -259,7 +259,7 @@ class XP_Image_Box_Food extends Widget_Base {
         $this->add_control(
             'title_hcolor',
             [
-                'label' => __( 'Hover Color', 'restimo' ),
+                'label' => __( 'Hover Color', 'creampoint' ),
                 'type' => Controls_Manager::COLOR,
                 'default' => '',
                 'selectors' => [
@@ -283,7 +283,7 @@ class XP_Image_Box_Food extends Widget_Base {
         $this->add_control(
             'heading_des',
             [
-                'label' => __( 'Description', 'restimo' ),
+                'label' => __( 'Description', 'creampoint' ),
                 'type' => Controls_Manager::HEADING,
                 'separator' => 'before',
             ]
@@ -292,7 +292,7 @@ class XP_Image_Box_Food extends Widget_Base {
         $this->add_control(
             'des_color',
             [
-                'label' => __( 'Color', 'restimo' ),
+                'label' => __( 'Color', 'creampoint' ),
                 'type' => Controls_Manager::COLOR,
                 'default' => '',
                 'selectors' => [
@@ -313,7 +313,7 @@ class XP_Image_Box_Food extends Widget_Base {
         $this->add_control(
             'heading_price',
             [
-                'label' => __( 'Price', 'restimo' ),
+                'label' => __( 'Price', 'creampoint' ),
                 'type' => Controls_Manager::HEADING,
                 'separator' => 'before',
             ]
@@ -322,7 +322,7 @@ class XP_Image_Box_Food extends Widget_Base {
         $this->add_control(
             'price_color',
             [
-                'label' => __( 'Color', 'restimo' ),
+                'label' => __( 'Color', 'creampoint' ),
                 'type' => Controls_Manager::COLOR,
                 'default' => '',
                 'selectors' => [
@@ -334,7 +334,7 @@ class XP_Image_Box_Food extends Widget_Base {
         $this->add_control(
             'price_bg_color',
             [
-                'label' => __( 'Background Color', 'restimo' ),
+                'label' => __( 'Background Color', 'creampoint' ),
                 'type' => Controls_Manager::COLOR,
                 'default' => '',
                 'selectors' => [
@@ -368,7 +368,7 @@ class XP_Image_Box_Food extends Widget_Base {
 
         echo '<div class="xp_bx_price xp-image-box ' . esc_attr(isset($settings['custom_class']) ? $settings['custom_class'] : '') . '">';
         echo '<div class="image-box">';
-        echo '<img src="' . esc_url($settings['image_box']['url']) . '" alt="' . esc_attr__('Image', 'restimo') . '" />';
+        echo '<img src="' . esc_url($settings['image_box']['url']) . '" alt="' . esc_attr__('Image', 'creampoint') . '" />';
         echo '</div>';
         echo '<div class="content-box image-box-price">';
         echo '<' . esc_html($settings['header_size']) . ' class="title-box">';
@@ -403,7 +403,7 @@ class XP_Image_Box_Food extends Widget_Base {
     #>
     <div class="xp_bx_price xp-image-box {{{ settings.custom_class }}}">
         <div class="image-box">
-            <img src="{{{ settings.image_box.url }}}" alt="<?php esc_attr_e( 'Image', 'restimo' ); ?>">
+            <img src="{{{ settings.image_box.url }}}" alt="<?php esc_attr_e( 'Image', 'creampoint' ); ?>">
         </div>
         <div class="content-box image-box-price">
             <{{ header_tag }} class="title-box">

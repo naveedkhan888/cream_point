@@ -3,14 +3,14 @@ namespace Elementor;
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measure)
 
-class Restimo_WooCommerce_Products extends Widget_Base {
+class CreamPoint_WooCommerce_Products extends Widget_Base {
 
     public function get_name() {
         return 'woocommerce_products';
     }
 
     public function get_title() {
-        return __( 'WooCommerce Products', 'restimo' );
+        return __( 'WooCommerce Products', 'creampoint' );
     }
 
     public function get_icon() {
@@ -18,7 +18,7 @@ class Restimo_WooCommerce_Products extends Widget_Base {
     }
 
     public function get_categories() {
-        return [ 'category_restimo' ];
+        return [ 'category_creampoint' ];
     }
 
     protected function register_controls() {
@@ -26,14 +26,14 @@ class Restimo_WooCommerce_Products extends Widget_Base {
         $this->start_controls_section(
             'content_section',
             [
-                'label' => __( 'Content', 'restimo' ),
+                'label' => __( 'Content', 'creampoint' ),
             ]
         );
 
         $this->add_control(
             'products',
             [
-                'label' => __( 'Products', 'restimo' ),
+                'label' => __( 'Products', 'creampoint' ),
                 'type' => Controls_Manager::SELECT2,
                 'multiple' => true,
                 'options' => $this->get_woocommerce_products(),
@@ -48,7 +48,7 @@ class Restimo_WooCommerce_Products extends Widget_Base {
         $this->start_controls_section(
             'style_content_section',
             [
-                'label' => __( 'Style', 'restimo' ),
+                'label' => __( 'Style', 'creampoint' ),
                 'tab'   => Controls_Manager::TAB_STYLE,
             ]
         );
@@ -56,7 +56,7 @@ class Restimo_WooCommerce_Products extends Widget_Base {
         $this->add_control(
             'product_title_color',
             [
-                'label' => __( 'Product Title Color', 'restimo' ),
+                'label' => __( 'Product Title Color', 'creampoint' ),
                 'type' => Controls_Manager::COLOR,
                 'default' => '',
                 'selectors' => [
@@ -68,7 +68,7 @@ class Restimo_WooCommerce_Products extends Widget_Base {
         $this->add_control(
             'product_price_color',
             [
-                'label' => __( 'Product Price Color', 'restimo' ),
+                'label' => __( 'Product Price Color', 'creampoint' ),
                 'type' => Controls_Manager::COLOR,
                 'default' => '',
                 'selectors' => [
@@ -80,7 +80,7 @@ class Restimo_WooCommerce_Products extends Widget_Base {
         $this->add_control(
             'button_color',
             [
-                'label' => __( 'Button Color', 'restimo' ),
+                'label' => __( 'Button Color', 'creampoint' ),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#000000',
                 'selectors' => [
@@ -92,7 +92,7 @@ class Restimo_WooCommerce_Products extends Widget_Base {
         $this->add_responsive_control(
             'product_grid_columns',
             [
-                'label' => __( 'Columns', 'restimo' ),
+                'label' => __( 'Columns', 'creampoint' ),
                 'type' => Controls_Manager::NUMBER,
                 'default' => 3,
                 'min' => 1,
@@ -133,7 +133,7 @@ class Restimo_WooCommerce_Products extends Widget_Base {
                         <p class="product-price"><?php echo wp_kses_post( $product_obj->get_price_html() ); ?></p>
                         <?php if ( function_exists( 'wc_get_cart_url' ) ) : ?>
                             <a href="?add-to-cart=<?php echo esc_attr( $product_id ); ?>" class="add-to-cart-button">
-                                <?php _e( 'Add to Cart', 'restimo' ); ?>
+                                <?php _e( 'Add to Cart', 'creampoint' ); ?>
                             </a>
                         <?php endif; ?>
                     </div>
@@ -163,4 +163,4 @@ class Restimo_WooCommerce_Products extends Widget_Base {
     }
 }
 
-Plugin::instance()->widgets_manager->register( new Restimo_WooCommerce_Products() );
+Plugin::instance()->widgets_manager->register( new CreamPoint_WooCommerce_Products() );

@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measu
  * Widget Name: Contact Form 7 
  */
 
-class Restimo_Contact_Form_7 extends Widget_Base {   //this name is added to plugin.php of the root folder
+class CreamPoint_Contact_Form_7 extends Widget_Base {   //this name is added to plugin.php of the root folder
 
 	public function get_name() {
 		return 'ictf7';
@@ -28,7 +28,7 @@ class Restimo_Contact_Form_7 extends Widget_Base {   //this name is added to plu
 	}
 
 	public function get_categories() {
-		return [ 'category_restimo' ];    // category of the widget
+		return [ 'category_creampoint' ];    // category of the widget
 	}
 
 	/**
@@ -41,15 +41,15 @@ class Restimo_Contact_Form_7 extends Widget_Base {   //this name is added to plu
 		$this->start_controls_section(
 			'section_content',
 			[
-				'label' => esc_html__( 'Contact Form 7', 'restimo' ),   //section name for controler view
+				'label' => esc_html__( 'Contact Form 7', 'creampoint' ),   //section name for controler view
 			]
 		);
 
 		$this->add_control(
 			'cf7',
 			[
-				'label' => esc_html__( 'Select Contact Form', 'restimo' ),
-                'description' => esc_html__('Contact form 7 - plugin must be installed and there must be some contact forms made with the contact form 7','restimo'),
+				'label' => esc_html__( 'Select Contact Form', 'creampoint' ),
+                'description' => esc_html__('Contact form 7 - plugin must be installed and there must be some contact forms made with the contact form 7','creampoint'),
 				'type' => Controls_Manager::SELECT2,
 				'multiple' => false,
 				'label_block' => true,
@@ -62,18 +62,18 @@ class Restimo_Contact_Form_7 extends Widget_Base {   //this name is added to plu
 		$this->start_controls_section(
 			'section_redirect',
 			[
-				'label' => esc_html__( 'After Submit Redirect Setting', 'restimo' ),   //section name for controler view
+				'label' => esc_html__( 'After Submit Redirect Setting', 'creampoint' ),   //section name for controler view
 			]
 		);
 
 		$this->add_control(
 			'cf7_redirect_page',
 			[
-				'label' => esc_html__( 'On Success Redirect To', 'restimo' ),
-                'description' => esc_html__('Select a page which you want users to redirect to when the contact fom is submitted and is successful. Leave Blank to Disable','restimo'),
+				'label' => esc_html__( 'On Success Redirect To', 'creampoint' ),
+                'description' => esc_html__('Select a page which you want users to redirect to when the contact fom is submitted and is successful. Leave Blank to Disable','creampoint'),
 				'type' => Controls_Manager::SELECT2,
 				'multiple' => false,
-				'options' => $this->restimo_get_all_pages(),
+				'options' => $this->creampoint_get_all_pages(),
 			]
 		);
 
@@ -82,7 +82,7 @@ class Restimo_Contact_Form_7 extends Widget_Base {   //this name is added to plu
 		$this->start_controls_section(
 			'section_style',
 			[
-				'label' => esc_html__( 'Style Contact Form', 'restimo' ),   //section name for controler view
+				'label' => esc_html__( 'Style Contact Form', 'creampoint' ),   //section name for controler view
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -90,8 +90,8 @@ class Restimo_Contact_Form_7 extends Widget_Base {   //this name is added to plu
 		$this->add_control(
 			'css_all_fields',
 			[
-				'label' => __( 'Global CSS For all fields', 'restimo' ),
-				'description' => __( 'This is the global css for all fields of cf7. It will not effect the other fileds but if you want to define things such as color, background color use this.', 'restimo' ),
+				'label' => __( 'Global CSS For all fields', 'creampoint' ),
+				'description' => __( 'This is the global css for all fields of cf7. It will not effect the other fileds but if you want to define things such as color, background color use this.', 'creampoint' ),
 				'type' => Controls_Manager::TEXTAREA,
 				'placeholder' => 'color:#000;',
 				'selectors' => [
@@ -103,8 +103,8 @@ class Restimo_Contact_Form_7 extends Widget_Base {   //this name is added to plu
 		$this->add_control(
 			'css_all_label',
 			[
-				'label' => __( 'All Label CSS', 'restimo' ),
-				'description' => __( 'Changes might not sometimes show in the live preview but check in the front end to see the changes.', 'restimo' ),
+				'label' => __( 'All Label CSS', 'creampoint' ),
+				'description' => __( 'Changes might not sometimes show in the live preview but check in the front end to see the changes.', 'creampoint' ),
 				'type' => Controls_Manager::TEXTAREA,
 				'placeholder' => 'color:#fff;',
 				'selectors' => [
@@ -115,8 +115,8 @@ class Restimo_Contact_Form_7 extends Widget_Base {   //this name is added to plu
 		$this->add_control(
 			'css_all_input',
 			[
-				'label' => __( 'All Input CSS', 'restimo' ),
-				'description' => __( 'Changes might not sometimes show in the live preview but check in the front end to see the changes.', 'restimo' ),
+				'label' => __( 'All Input CSS', 'creampoint' ),
+				'description' => __( 'Changes might not sometimes show in the live preview but check in the front end to see the changes.', 'creampoint' ),
 				'type' => Controls_Manager::TEXTAREA,
 				'placeholder' => 'width:100%;
 							      background:red;',
@@ -131,8 +131,8 @@ class Restimo_Contact_Form_7 extends Widget_Base {   //this name is added to plu
 		$this->add_control(
 			'css_text_area',
 			[
-				'label' => __( 'Textarea CSS', 'restimo' ),
-				'description' => __( 'Changes might not sometimes show in the live preview but check in the front end to see the changes.', 'restimo' ),
+				'label' => __( 'Textarea CSS', 'creampoint' ),
+				'description' => __( 'Changes might not sometimes show in the live preview but check in the front end to see the changes.', 'creampoint' ),
 				'type' => Controls_Manager::TEXTAREA,
 				'placeholder' => 'height:100px; 
 								  width:100%;',
@@ -146,7 +146,7 @@ class Restimo_Contact_Form_7 extends Widget_Base {   //this name is added to plu
 		$this->add_control(
 			'css_checkbox',
 			[
-				'label' => __( 'Checkbox/ Radio CSS', 'restimo' ),
+				'label' => __( 'Checkbox/ Radio CSS', 'creampoint' ),
 				'type' => Controls_Manager::TEXTAREA,
 				'placeholder' => 'display: block;',
 				'selectors' => [
@@ -158,7 +158,7 @@ class Restimo_Contact_Form_7 extends Widget_Base {   //this name is added to plu
 		$this->add_control(
 			'css_select',
 			[
-				'label' => __( 'Dropdown/ Select Box css', 'restimo' ),
+				'label' => __( 'Dropdown/ Select Box css', 'creampoint' ),
 				'type' => Controls_Manager::TEXTAREA,
 				'placeholder' => 'width: 100;',
 				'selectors' => [
@@ -169,7 +169,7 @@ class Restimo_Contact_Form_7 extends Widget_Base {   //this name is added to plu
 		$this->add_control(
 			'css_selectoptions',
 			[
-				'label' => __( 'Select Options Css', 'restimo' ),
+				'label' => __( 'Select Options Css', 'creampoint' ),
 				'type' => Controls_Manager::TEXTAREA,
 				'placeholder' => 'color: red;',
 				'selectors' => [
@@ -181,7 +181,7 @@ class Restimo_Contact_Form_7 extends Widget_Base {   //this name is added to plu
 		$this->add_control(
 			'css_file',
 			[
-				'label' => __( 'File CSS', 'restimo' ),
+				'label' => __( 'File CSS', 'creampoint' ),
 				'type' => Controls_Manager::TEXTAREA,
 				'placeholder' => 'display: block;',
 				'selectors' => [
@@ -192,7 +192,7 @@ class Restimo_Contact_Form_7 extends Widget_Base {   //this name is added to plu
 		$this->add_control(
 			'css_date',
 			[
-				'label' => __( 'Date CSS', 'restimo' ),
+				'label' => __( 'Date CSS', 'creampoint' ),
 				'type' => Controls_Manager::TEXTAREA,
 				'placeholder' => 'display: block;',
 				'selectors' => [
@@ -203,8 +203,8 @@ class Restimo_Contact_Form_7 extends Widget_Base {   //this name is added to plu
 		$this->add_control(
 			'css_input_submit',
 			[
-				'label' => __( 'Submit Button CSS', 'restimo' ),
-				'description' => __( 'Changes might not sometimes show in the live preview but check in the front end to see the changes.', 'restimo' ),
+				'label' => __( 'Submit Button CSS', 'creampoint' ),
+				'description' => __( 'Changes might not sometimes show in the live preview but check in the front end to see the changes.', 'creampoint' ),
 				'type' => Controls_Manager::TEXTAREA,
 				'placeholder' => 'width:100%; background:red;',
 				'selectors' => [
@@ -215,7 +215,7 @@ class Restimo_Contact_Form_7 extends Widget_Base {   //this name is added to plu
 		$this->add_control(
 			'css_input_submit_hover',
 			[
-				'label' => __( 'Submit Button Hover CSS', 'restimo' ),
+				'label' => __( 'Submit Button Hover CSS', 'creampoint' ),
 				'type' => Controls_Manager::TEXTAREA,
 				'placeholder' => 'background:#fff;',
 				'selectors' => [
@@ -227,7 +227,7 @@ class Restimo_Contact_Form_7 extends Widget_Base {   //this name is added to plu
 		$this->add_control(
 			'css_responce',
 			[
-				'label' => __( 'response CSS', 'restimo' ),
+				'label' => __( 'response CSS', 'creampoint' ),
 				'type' => Controls_Manager::TEXTAREA,
 				'placeholder' => 'color:red;',
 				'selectors' => [
@@ -247,14 +247,14 @@ class Restimo_Contact_Form_7 extends Widget_Base {   //this name is added to plu
 
 		$settings = $this->get_settings();
         if(!empty($settings['cf7'])){
-    	   echo'<div class="elementor-shortcode restimo-cf7-'.$v_veriable.'">';
+    	   echo'<div class="elementor-shortcode creampoint-cf7-'.$v_veriable.'">';
                 echo do_shortcode('[contact-form-7 id="'.$settings['cf7'].'"]');    
            echo '</div>';  
     	}
 
  		if(!empty($settings['cf7_redirect_page'])) {  ?>
  			<script>
- 			        var theform = document.querySelector('.restimo-cf7-<?php echo esc_js( $v_veriable ); ?>');
+ 			        var theform = document.querySelector('.creampoint-cf7-<?php echo esc_js( $v_veriable ); ?>');
 						theform.addEventListener( 'wpcf7mailsent', function( event ) {
 					    location = '<?php echo get_permalink( $settings['cf7_redirect_page'] ); ?>';
 					}, false );
@@ -276,12 +276,12 @@ class Restimo_Contact_Form_7 extends Widget_Base {   //this name is added to plu
 	    	}
 	    }
 	    else{
-	        (int)$catlist['0'] = esc_html__('No contect From 7 form found', 'restimo');
+	        (int)$catlist['0'] = esc_html__('No contect From 7 form found', 'creampoint');
 	    }
 	  	return $catlist;
 	}
 
-	protected function restimo_get_all_pages(){
+	protected function creampoint_get_all_pages(){
 
 	  	$args = array('post_type' => 'page', 'posts_per_page' => -1);
 
@@ -293,11 +293,11 @@ class Restimo_Contact_Form_7 extends Widget_Base {   //this name is added to plu
 	      }
 	    }
 	    else{
-	        (int)$catlist['0'] = esc_html__('No Pages Found!', 'restimo');
+	        (int)$catlist['0'] = esc_html__('No Pages Found!', 'creampoint');
 	    }
 	  	return $catlist;
 	}
 
 }
-// After the Restimo_Contact_Form_7 class is defined, I must register the new widget class with Elementor:
-Plugin::instance()->widgets_manager->register( new Restimo_Contact_Form_7() );
+// After the CreamPoint_Contact_Form_7 class is defined, I must register the new widget class with Elementor:
+Plugin::instance()->widgets_manager->register( new CreamPoint_Contact_Form_7() );

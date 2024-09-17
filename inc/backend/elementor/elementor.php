@@ -1,8 +1,8 @@
 <?php
 
 // Load the theme's custom Widgets so that they appear in the Elementor element panel.
-add_action( 'elementor/widgets/register', 'restimo_register_elementor_widgets' );
-function restimo_register_elementor_widgets() {
+add_action( 'elementor/widgets/register', 'creampoint_register_elementor_widgets' );
+function creampoint_register_elementor_widgets() {
     // Include PHP files for Elementor widgets
     // These files contain registration logic for custom Elementor widgets
     locate_template('/inc/backend/elementor/widgets/widgets.php', true, true);
@@ -10,20 +10,20 @@ function restimo_register_elementor_widgets() {
 
 }
 
-// Add a custom 'category_restimo' category for to the Elementor element panel so that our theme's widgets have their own category.
+// Add a custom 'category_creampoint' category for to the Elementor element panel so that our theme's widgets have their own category.
 add_action( 'elementor/init', function() {
     \Elementor\Plugin::$instance->elements_manager->add_category( 
-        'category_restimo',
+        'category_creampoint',
         [
-            'title' => __( 'Restimo', 'restimo' ),
+            'title' => __( 'CreamPoint', 'creampoint' ),
             'icon' => 'fa fa-plug', //default icon
         ],
         1 // position
     );
     \Elementor\Plugin::$instance->elements_manager->add_category( 
-        'category_restimo_header',
+        'category_creampoint_header',
         [
-            'title' => __( 'XP Header', 'restimo' ),
+            'title' => __( 'XP Header', 'creampoint' ),
             'icon' => 'fa fa-plug', //default icon
         ],
         2 // position
@@ -31,7 +31,7 @@ add_action( 'elementor/init', function() {
 });
 
 // Post types with Elementor
-function restimo_add_cpt_support() {
+function creampoint_add_cpt_support() {
     
     //if exists, assign to $cpt_support var
     $cpt_support = get_option( 'elementor_cpt_support' );
@@ -61,10 +61,10 @@ function restimo_add_cpt_support() {
     
     //otherwise do nothing, portfolio already exists in elementor_cpt_support option
 }
-add_action( 'elementor/init', 'restimo_add_cpt_support' );
+add_action( 'elementor/init', 'creampoint_add_cpt_support' );
 
 // Upload SVG for Elementor
-function restimo_unfiltered_files_upload() {
+function creampoint_unfiltered_files_upload() {
     
     //if exists, assign to $cpt_support var
     $cpt_support = get_option( 'elementor_unfiltered_files_upload' );
@@ -75,17 +75,17 @@ function restimo_unfiltered_files_upload() {
         update_option( 'elementor_unfiltered_files_upload', $cpt_support ); //write it to the database
     }
 }
-add_action( 'elementor/init', 'restimo_unfiltered_files_upload' );
+add_action( 'elementor/init', 'creampoint_unfiltered_files_upload' );
 
 
 
 /*Fix Elementor Pro*/
-function restimo_register_elementor_locations( $elementor_theme_manager ) {
+function creampoint_register_elementor_locations( $elementor_theme_manager ) {
 
     $elementor_theme_manager->register_all_core_location();
 
 }
-add_action( 'elementor/theme/register_locations', 'restimo_register_elementor_locations' );
+add_action( 'elementor/theme/register_locations', 'creampoint_register_elementor_locations' );
 
 /*** add options to sections ***/
 add_action('elementor/element/container/section_layout/after_section_end', function( $container, $args ) {
@@ -94,14 +94,14 @@ add_action('elementor/element/container/section_layout/after_section_end', funct
     $container->start_controls_section(
         'header_custom_class',
         [
-            'label' => __( 'For Header', 'restimo' ),
+            'label' => __( 'For Header', 'creampoint' ),
             'tab' => \Elementor\Controls_Manager::TAB_LAYOUT,
         ]
     );
     $container->add_control(
         'sticky_class',
         [
-            'label'        => __( 'Sticky On/Off', 'restimo' ),
+            'label'        => __( 'Sticky On/Off', 'creampoint' ),
             'type'         => Elementor\Controls_Manager::SWITCHER,
             'return_value' => 'is-fixed',
             'prefix_class' => '',
@@ -110,7 +110,7 @@ add_action('elementor/element/container/section_layout/after_section_end', funct
     $container->add_control(
         'sticky_background',
         [
-            'label'     => __( 'Background Scroll', 'restimo' ),
+            'label'     => __( 'Background Scroll', 'creampoint' ),
             'type'      => Elementor\Controls_Manager::COLOR,
             'selectors' => [
                 '{{WRAPPER}}.is-fixed.is-stuck' => 'background: {{VALUE}};',
@@ -123,7 +123,7 @@ add_action('elementor/element/container/section_layout/after_section_end', funct
     $container->add_responsive_control(
         'offset_space',
         [
-            'label' => __( 'Offset', 'restimo' ),
+            'label' => __( 'Offset', 'creampoint' ),
             'type' => Elementor\Controls_Manager::SLIDER,
             'range' => [
                 'px' => [

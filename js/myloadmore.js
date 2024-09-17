@@ -30,7 +30,7 @@
 			count   = grid.data('count');
 
 		$.ajax({
-			url : restimo_loadmore_params.ajaxurl, // AJAX handler
+			url : creampoint_loadmore_params.ajaxurl, // AJAX handler
 			data : {
 				'action': 'loadmore', // the parameter for admin-ajax.php
 				'ppp'	: more,

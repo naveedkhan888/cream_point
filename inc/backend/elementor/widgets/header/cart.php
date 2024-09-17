@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measu
 /**
  * Widget Name: Cart
  */
-class Restimo_Cart extends Widget_Base{
+class CreamPoint_Cart extends Widget_Base{
 
  	// The get_name() method is a simple one, you just need to return a widget name that will be used in the code.
 	public function get_name() {
@@ -14,7 +14,7 @@ class Restimo_Cart extends Widget_Base{
 
 	// The get_title() method, which again, is a very simple one, you need to return the widget title that will be displayed as the widget label.
 	public function get_title() {
-		return __( 'XP Cart Header', 'restimo' );
+		return __( 'XP Cart Header', 'creampoint' );
 	}
 
 	// The get_icon() method, is an optional but recommended method, it lets you set the widget icon. you can use any of the eicon or font-awesome icons, simply return the class name as a string.
@@ -24,7 +24,7 @@ class Restimo_Cart extends Widget_Base{
 
 	// The get_categories method, lets you set the category of the widget, return the category name as a string.
 	public function get_categories() {
-		return [ 'category_restimo_header' ];
+		return [ 'category_creampoint_header' ];
 	}
 
 	protected function register_controls() {
@@ -32,14 +32,14 @@ class Restimo_Cart extends Widget_Base{
 		$this->start_controls_section(
 			'style_icon_section',
 			[
-				'label' => __( 'Icon', 'restimo' ),
+				'label' => __( 'Icon', 'creampoint' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
 		$this->add_responsive_control(
 			'icon_size',
 			[
-				'label' => __( 'Icon Size', 'restimo' ),
+				'label' => __( 'Icon Size', 'creampoint' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -55,7 +55,7 @@ class Restimo_Cart extends Widget_Base{
 		$this->add_control(
 			'icon_color',
 			[
-				'label' => __( 'Icon Color', 'restimo' ),
+				'label' => __( 'Icon Color', 'creampoint' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -67,7 +67,7 @@ class Restimo_Cart extends Widget_Base{
 		$this->add_control(
 			'bg_count',
 			[
-				'label' => __( 'Background Count', 'restimo' ),
+				'label' => __( 'Background Count', 'creampoint' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -79,7 +79,7 @@ class Restimo_Cart extends Widget_Base{
 		$this->add_control(
 			'count_color',
 			[
-				'label' => __( 'Count Color', 'restimo' ),
+				'label' => __( 'Count Color', 'creampoint' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -92,18 +92,18 @@ class Restimo_Cart extends Widget_Base{
 		
 	}
 
-	public static function restimo_render_menu_cart() {
+	public static function creampoint_render_menu_cart() {
 		if ( null === WC()->cart ) {
 			return;
 		}
-		$product_count = sprintf ( _n( '%d', '%d', WC()->cart->get_cart_contents_count(), 'restimo' ), WC()->cart->get_cart_contents_count() );
+		$product_count = sprintf ( _n( '%d', '%d', WC()->cart->get_cart_contents_count(), 'creampoint' ), WC()->cart->get_cart_contents_count() );
 		$cart_url = esc_url( wc_get_cart_url() );
 
 		$widget_cart_is_hidden = apply_filters( 'woocommerce_widget_cart_is_hidden', false );
 		?>
 		<?php if ( ! $widget_cart_is_hidden ) : ?>
 			<div class="xptf-cart xptf-cta-header">
-				<a class="cart-contents xp-minicart" href="<?php echo esc_url( $cart_url ); ?>" title="<?php esc_attr_e( 'View your shopping cart', 'restimo' ); ?>">
+				<a class="cart-contents xp-minicart" href="<?php echo esc_url( $cart_url ); ?>" title="<?php esc_attr_e( 'View your shopping cart', 'creampoint' ); ?>">
 				    <i class="xp-webicon-business"></i>
 				    <span class="count"><?php echo esc_html( $product_count ); ?></span>
 				</a>
@@ -119,9 +119,9 @@ class Restimo_Cart extends Widget_Base{
 
 	protected function render() {
 		$settings = $this->get_settings_for_display();
-		self::restimo_render_menu_cart();
+		self::creampoint_render_menu_cart();
 	}
 
 }
-// After the Restimo_Cart class is defined, I must register the new widget class with Elementor:
-Plugin::instance()->widgets_manager->register( new Restimo_Cart() );
+// After the CreamPoint_Cart class is defined, I must register the new widget class with Elementor:
+Plugin::instance()->widgets_manager->register( new CreamPoint_Cart() );

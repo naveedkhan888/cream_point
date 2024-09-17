@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Restimo
+ * @package CreamPoint
  */
 
 ?>
@@ -26,7 +26,7 @@
 		</div>
 		<?php if ( 'post' === get_post_type() ) : ?>
 		<div class="entry-meta">
-			<?php if( restimo_get_option( 'post_entry_meta' ) ) { restimo_post_meta(); } ?>
+			<?php if( creampoint_get_option( 'post_entry_meta' ) ) { creampoint_post_meta(); } ?>
 	        <a href="<?php the_permalink(); ?>" class="btn-details"><i class="xp-webicon-trajectory"></i></a>
 		</div><!-- .entry-meta -->
 		<?php endif; ?>

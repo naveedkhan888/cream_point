@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measu
 /**
  * Widget Name: Progress Bars 
  */
-class Restimo_Progress_Bars extends Widget_Base{
+class CreamPoint_Progress_Bars extends Widget_Base{
 
  	// The get_name() method is a simple one, you just need to return a widget name that will be used in the code.
 	public function get_name() {
@@ -14,7 +14,7 @@ class Restimo_Progress_Bars extends Widget_Base{
 
 	// The get_title() method, which again, is a very simple one, you need to return the widget title that will be displayed as the widget label.
 	public function get_title() {
-		return __( 'XP Progress Bars', 'restimo' );
+		return __( 'XP Progress Bars', 'creampoint' );
 	}
 
 	// The get_icon() method, is an optional but recommended method, it lets you set the widget icon. you can use any of the eicon or font-awesome icons, simply return the class name as a string.
@@ -24,7 +24,7 @@ class Restimo_Progress_Bars extends Widget_Base{
 
 	// The get_categories method, lets you set the category of the widget, return the category name as a string.
 	public function get_categories() {
-		return [ 'category_restimo' ];
+		return [ 'category_creampoint' ];
 	}
 
 	protected function register_controls() {
@@ -33,19 +33,19 @@ class Restimo_Progress_Bars extends Widget_Base{
 		$this->start_controls_section(
 			'content_section',
 			[
-				'label' => __( 'Content', 'restimo' ),
+				'label' => __( 'Content', 'creampoint' ),
 			]
 		);
 
 		$this->add_control(
 			'bar_style',
 			[
-				'label' 	=> __( 'Bar Style', 'restimo' ),
+				'label' 	=> __( 'Bar Style', 'creampoint' ),
 				'type'  	=> Controls_Manager::SELECT,
 				'default' 	=> 'line',
 				'options' 	=> [
-					'line'    => __( 'Style 1: Line', 'restimo' ),
-					'circle'  => __( 'Style 2: Circle', 'restimo' ),
+					'line'    => __( 'Style 1: Line', 'creampoint' ),
+					'circle'  => __( 'Style 2: Circle', 'creampoint' ),
 				]
 			]
 		);
@@ -55,7 +55,7 @@ class Restimo_Progress_Bars extends Widget_Base{
 			[
 				'label' => 'Title',
 				'type' => Controls_Manager::TEXTAREA,
-				'default' => __( 'Keyword Research', 'restimo' ),
+				'default' => __( 'Keyword Research', 'creampoint' ),
 			]
 		);
 		$this->add_control(
@@ -72,7 +72,7 @@ class Restimo_Progress_Bars extends Widget_Base{
 		$this->add_control(
 			'percent_text',
 			[
-				'label'   => esc_html__( 'Show Percent Text', 'restimo' ),
+				'label'   => esc_html__( 'Show Percent Text', 'creampoint' ),
 				'type'    => Controls_Manager::SWITCHER,
 				'default' => 'yes',
 			]
@@ -80,19 +80,19 @@ class Restimo_Progress_Bars extends Widget_Base{
 		$this->add_responsive_control(
 			'align',
 			[
-				'label' => __( 'Alignment', 'restimo' ),
+				'label' => __( 'Alignment', 'creampoint' ),
 				'type' => Controls_Manager::CHOOSE,
 				'options' => [
 					'left'    => [
-						'title' => __( 'Left', 'restimo' ),
+						'title' => __( 'Left', 'creampoint' ),
 						'icon' => 'eicon-text-align-left',
 					],
 					'center' => [
-						'title' => __( 'Center', 'restimo' ),
+						'title' => __( 'Center', 'creampoint' ),
 						'icon' => 'eicon-text-align-center',
 					],
 					'right' => [
-						'title' => __( 'Right', 'restimo' ),
+						'title' => __( 'Right', 'creampoint' ),
 						'icon' => 'eicon-text-align-right',
 					],
 				],
@@ -112,14 +112,14 @@ class Restimo_Progress_Bars extends Widget_Base{
 		$this->start_controls_section(
 			'bar_style_section',
 			[
-				'label' => __( 'Progress Bar', 'restimo' ),
+				'label' => __( 'Progress Bar', 'creampoint' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
 		$this->add_control(
 			'bar_bg',
 			[
-				'label' => __( 'Background', 'restimo' ),
+				'label' => __( 'Background', 'creampoint' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -130,7 +130,7 @@ class Restimo_Progress_Bars extends Widget_Base{
 		$this->add_control(
 			'bar_color',
 			[
-				'label' => __( 'Color', 'restimo' ),
+				'label' => __( 'Color', 'creampoint' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '#fd85b2',
 				'condition' => [
@@ -141,7 +141,7 @@ class Restimo_Progress_Bars extends Widget_Base{
 		$this->add_responsive_control(
 			'bar_height',
 			[
-				'label' => __( 'Height', 'restimo' ),
+				'label' => __( 'Height', 'creampoint' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -160,7 +160,7 @@ class Restimo_Progress_Bars extends Widget_Base{
 		$this->add_responsive_control(
 			'bar_size',
 			[
-				'label' => __( 'Circle Width', 'restimo' ),
+				'label' => __( 'Circle Width', 'creampoint' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -179,7 +179,7 @@ class Restimo_Progress_Bars extends Widget_Base{
 		$this->add_control(
 			'lbar_color',
 			[
-				'label' => __( 'Color', 'restimo' ),
+				'label' => __( 'Color', 'creampoint' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '#fd85b2',
 				'selectors' => [
@@ -193,7 +193,7 @@ class Restimo_Progress_Bars extends Widget_Base{
 		$this->add_control(
 			'bg_color',
 			[
-				'label' => __( 'Line Color', 'restimo' ),
+				'label' => __( 'Line Color', 'creampoint' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -205,7 +205,7 @@ class Restimo_Progress_Bars extends Widget_Base{
 		$this->add_responsive_control(
 			'line_height_circle',
 			[
-				'label' => __( 'Line Height', 'restimo' ),
+				'label' => __( 'Line Height', 'creampoint' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -222,7 +222,7 @@ class Restimo_Progress_Bars extends Widget_Base{
 		$this->add_control(
 			'radius_line',
 			[
-				'label' => __( 'Border Radius', 'restimo' ),
+				'label' => __( 'Border Radius', 'creampoint' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -244,7 +244,7 @@ class Restimo_Progress_Bars extends Widget_Base{
 		$this->start_controls_section(
 			'style_text_section',
 			[
-				'label' => __( 'Text', 'restimo' ),
+				'label' => __( 'Text', 'creampoint' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -253,14 +253,14 @@ class Restimo_Progress_Bars extends Widget_Base{
 		$this->add_control(
 			'heading_title',
 			[
-				'label' => __( 'Title', 'restimo' ),
+				'label' => __( 'Title', 'creampoint' ),
 				'type' => Controls_Manager::HEADING,
 			]
 		);
 		$this->add_responsive_control(
 			'title_space',
 			[
-				'label' => __( 'Spacing', 'restimo' ),
+				'label' => __( 'Spacing', 'creampoint' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -277,7 +277,7 @@ class Restimo_Progress_Bars extends Widget_Base{
 		$this->add_control(
 			'title_color',
 			[
-				'label' => __( 'Color', 'restimo' ),
+				'label' => __( 'Color', 'creampoint' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -297,7 +297,7 @@ class Restimo_Progress_Bars extends Widget_Base{
 		$this->add_control(
 			'heading_percent',
 			[
-				'label' => __( 'Percent', 'restimo' ),
+				'label' => __( 'Percent', 'creampoint' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -305,7 +305,7 @@ class Restimo_Progress_Bars extends Widget_Base{
 		$this->add_control(
 			'per_color',
 			[
-				'label' => __( 'Color', 'restimo' ),
+				'label' => __( 'Color', 'creampoint' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -316,7 +316,7 @@ class Restimo_Progress_Bars extends Widget_Base{
 		$this->add_control(
 			'per_bg',
 			[
-				'label' => __( 'Background', 'restimo' ),
+				'label' => __( 'Background', 'creampoint' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -334,7 +334,7 @@ class Restimo_Progress_Bars extends Widget_Base{
 		$this->add_responsive_control(
 			'per_width',
 			[
-				'label' => __( 'Width', 'restimo' ),
+				'label' => __( 'Width', 'creampoint' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -385,5 +385,5 @@ class Restimo_Progress_Bars extends Widget_Base{
 		return [ 'circle', 'percent' ];
 	}
 }
-// After the Restimo_Progress_Bars class is defined, I must register the new widget class with Elementor:
-Plugin::instance()->widgets_manager->register( new Restimo_Progress_Bars() );
+// After the CreamPoint_Progress_Bars class is defined, I must register the new widget class with Elementor:
+Plugin::instance()->widgets_manager->register( new CreamPoint_Progress_Bars() );

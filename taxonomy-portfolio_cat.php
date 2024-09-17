@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Restimo
+ * @package CreamPoint
  */
 
 get_header(); ?>
@@ -16,7 +16,7 @@ get_header(); ?>
 				<main id="main" class="site-main">
 					<div class="project-filter-wrapper">
 						<?php $p_count = wp_count_posts('xp_portfolio'); $c = $p_count->publish; if ( have_posts() ) : ?>
-							<div id="projects-grid" class="projects-grid img-scale <?php restimo_portfolio_option_class(); ?>" data-load="3" data-count="<?php echo esc_attr($c); ?>">
+							<div id="projects-grid" class="projects-grid img-scale <?php creampoint_portfolio_option_class(); ?>" data-load="3" data-count="<?php echo esc_attr($c); ?>">
 								<div class="grid-sizer"></div>
 								<?php
 									/* Start the Loop */
@@ -33,7 +33,7 @@ get_header(); ?>
 								?>
 							</div>
 							<div class="pagination-wrapper">
-								<?php restimo_posts_navigation(); ?>
+								<?php creampoint_posts_navigation(); ?>
 							</div>
 						<?php 	
 						else :

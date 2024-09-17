@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measu
 /**
  * Widget Name: Tabs
  */
-class Restimo_Tabs extends Widget_Base{
+class CreamPoint_Tabs extends Widget_Base{
 
  	// The get_name() method is a simple one, you just need to return a widget name that will be used in the code.
 	public function get_name() {
@@ -14,7 +14,7 @@ class Restimo_Tabs extends Widget_Base{
 
 	// The get_title() method, which again, is a very simple one, you need to return the widget title that will be displayed as the widget label.
 	public function get_title() {
-		return __( 'XP Tabs', 'restimo' );
+		return __( 'XP Tabs', 'creampoint' );
 	}
 
 	// The get_icon() method, is an optional but recommended method, it lets you set the widget icon. you can use any of the eicon or font-awesome icons, simply return the class name as a string.
@@ -24,7 +24,7 @@ class Restimo_Tabs extends Widget_Base{
 
 	// The get_categories method, lets you set the category of the widget, return the category name as a string.
 	public function get_categories() {
-		return [ 'category_restimo' ];
+		return [ 'category_creampoint' ];
 	}
 
 	protected function register_controls() {
@@ -33,7 +33,7 @@ class Restimo_Tabs extends Widget_Base{
 		$this->start_controls_section(
 			'content_section',
 			[
-				'label' => __( 'Tabs', 'restimo' ),
+				'label' => __( 'Tabs', 'creampoint' ),
 			]
 		);
 
@@ -42,10 +42,10 @@ class Restimo_Tabs extends Widget_Base{
 		$repeater->add_control(
 			'tab_title',
 			[
-				'label' => __( 'Title & Description', 'restimo' ),
+				'label' => __( 'Title & Description', 'creampoint' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => __( 'Tab Title', 'restimo' ),
-				'placeholder' => __( 'Tab Title', 'restimo' ),
+				'default' => __( 'Tab Title', 'creampoint' ),
+				'placeholder' => __( 'Tab Title', 'creampoint' ),
 				'label_block' => true,
 			]
 		);
@@ -53,9 +53,9 @@ class Restimo_Tabs extends Widget_Base{
 		$repeater->add_control(
 			'tab_content',
 			[
-				'label' => __( 'Content', 'restimo' ),
-				'default' => __( 'Tab Content', 'restimo' ),
-				'placeholder' => __( 'Tab Content', 'restimo' ),
+				'label' => __( 'Content', 'creampoint' ),
+				'default' => __( 'Tab Content', 'creampoint' ),
+				'placeholder' => __( 'Tab Content', 'creampoint' ),
 				'type' => Controls_Manager::WYSIWYG,
 				'show_label' => false,
 			]
@@ -64,17 +64,17 @@ class Restimo_Tabs extends Widget_Base{
 		$this->add_control(
 			'xp_tabs',
 			[
-				'label' => __( 'Tabs Items', 'restimo' ),
+				'label' => __( 'Tabs Items', 'creampoint' ),
 				'type' => Controls_Manager::REPEATER,
 				'fields' => $repeater->get_controls(),
 				'default' => [
 					[
-						'tab_title' => __( 'Tab #1', 'restimo' ),
-						'tab_content' => __( 'We help ambitious businesses like yours generate more profits by building awareness, driving web traffic, connecting with customers, and growing overall sales. Give us a call.', 'restimo' ),
+						'tab_title' => __( 'Tab #1', 'creampoint' ),
+						'tab_content' => __( 'We help ambitious businesses like yours generate more profits by building awareness, driving web traffic, connecting with customers, and growing overall sales. Give us a call.', 'creampoint' ),
 					],
 					[
-						'tab_title' => __( 'Tab #2', 'restimo' ),
-						'tab_content' => __( 'We help ambitious businesses like yours generate more profits by building awareness, driving web traffic, connecting with customers, and growing overall sales. Give us a call.', 'restimo' ),
+						'tab_title' => __( 'Tab #2', 'creampoint' ),
+						'tab_content' => __( 'We help ambitious businesses like yours generate more profits by building awareness, driving web traffic, connecting with customers, and growing overall sales. Give us a call.', 'creampoint' ),
 					],
 				],
 				'title_field' => '{{{ tab_title }}}',
@@ -88,14 +88,14 @@ class Restimo_Tabs extends Widget_Base{
 		$this->start_controls_section(
 			'style_title',
 			[
-				'label' => __( 'Title', 'restimo' ),
+				'label' => __( 'Title', 'creampoint' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
 		$this->add_responsive_control(
 			'title_width',
 			[
-				'label' => __( 'Width', 'restimo' ),
+				'label' => __( 'Width', 'creampoint' ),
 				'type' => Controls_Manager::SLIDER,
 				'size_units' => [ 'px', '%' ],
 				'range' => [
@@ -116,7 +116,7 @@ class Restimo_Tabs extends Widget_Base{
 		$this->add_responsive_control(
 			'title_space',
 			[
-				'label' => __( 'Spacing', 'restimo' ),
+				'label' => __( 'Spacing', 'creampoint' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -144,14 +144,14 @@ class Restimo_Tabs extends Widget_Base{
 		$this->start_controls_tab(
 			'tab_title_normal',
 			[
-				'label' => __( 'Normal', 'restimo' ),
+				'label' => __( 'Normal', 'creampoint' ),
 			]
 		);
 
 		$this->add_control(
 			'title_bgcolor',
 			[
-				'label' => __( 'Background', 'restimo' ),
+				'label' => __( 'Background', 'creampoint' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -162,7 +162,7 @@ class Restimo_Tabs extends Widget_Base{
 		$this->add_control(
 			'title_color',
 			[
-				'label' => __( 'Color', 'restimo' ),
+				'label' => __( 'Color', 'creampoint' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -184,14 +184,14 @@ class Restimo_Tabs extends Widget_Base{
 		$this->start_controls_tab(
 			'tab_title_active',
 			[
-				'label' => __( 'Active/Hover', 'restimo' ),
+				'label' => __( 'Active/Hover', 'creampoint' ),
 			]
 		);
 
 		$this->add_control(
 			'title_bg_active',
 			[
-				'label' => __( 'Background', 'restimo' ),
+				'label' => __( 'Background', 'creampoint' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -203,7 +203,7 @@ class Restimo_Tabs extends Widget_Base{
 		$this->add_control(
 			'title_color_active',
 			[
-				'label' => __( 'Color', 'restimo' ),
+				'label' => __( 'Color', 'creampoint' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -214,7 +214,7 @@ class Restimo_Tabs extends Widget_Base{
 		$this->add_control(
 			'title_border_active',
 			[
-				'label' => __( 'Border Color', 'restimo' ),
+				'label' => __( 'Border Color', 'creampoint' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -233,14 +233,14 @@ class Restimo_Tabs extends Widget_Base{
 		$this->start_controls_section(
 			'style_content',
 			[
-				'label' => __( 'Content', 'restimo' ),
+				'label' => __( 'Content', 'creampoint' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
 		$this->add_control(
 			'content_color',
 			[
-				'label' => __( 'Color', 'restimo' ),
+				'label' => __( 'Color', 'creampoint' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -260,7 +260,7 @@ class Restimo_Tabs extends Widget_Base{
 		$this->add_responsive_control(
 			'content_padding',
 			[
-				'label' => __( 'Padding', 'restimo' ),
+				'label' => __( 'Padding', 'creampoint' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', 'em', '%' ],
 				'selectors' => [
@@ -297,5 +297,5 @@ class Restimo_Tabs extends Widget_Base{
 	}
 
 }
-// After the Restimo_Tabs class is defined, I must register the new widget class with Elementor:
-Plugin::instance()->widgets_manager->register( new Restimo_Tabs() );
+// After the CreamPoint_Tabs class is defined, I must register the new widget class with Elementor:
+Plugin::instance()->widgets_manager->register( new CreamPoint_Tabs() );

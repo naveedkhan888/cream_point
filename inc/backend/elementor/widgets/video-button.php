@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measu
 /**
  * Widget Name: Video Button
  */
-class Restimo_VideoPopup extends Widget_Base{
+class CreamPoint_VideoPopup extends Widget_Base{
 
  	// The get_name() method is a simple one, you just need to return a widget name that will be used in the code.
 	public function get_name() {
@@ -14,7 +14,7 @@ class Restimo_VideoPopup extends Widget_Base{
 
 	// The get_title() method, which again, is a very simple one, you need to return the widget title that will be displayed as the widget label.
 	public function get_title() {
-		return __( 'XP Video Button', 'restimo' );
+		return __( 'XP Video Button', 'creampoint' );
 	}
 
 	// The get_icon() method, is an optional but recommended method, it lets you set the widget icon. you can use any of the eicon or font-awesome icons, simply return the class name as a string.
@@ -24,7 +24,7 @@ class Restimo_VideoPopup extends Widget_Base{
 
 	// The get_categories method, lets you set the category of the widget, return the category name as a string.
 	public function get_categories() {
-		return [ 'category_restimo' ];
+		return [ 'category_creampoint' ];
 	}
 
 	protected function register_controls() {
@@ -33,26 +33,26 @@ class Restimo_VideoPopup extends Widget_Base{
 		$this->start_controls_section(
 			'content_section',
 			[
-				'label' => __( 'Button', 'restimo' ),
+				'label' => __( 'Button', 'creampoint' ),
 			]
 		);
 
 		$this->add_responsive_control(
 			'align',
 			[
-				'label' => __( 'Alignment', 'restimo' ),
+				'label' => __( 'Alignment', 'creampoint' ),
 				'type' => Controls_Manager::CHOOSE,
 				'options' => [
 					'flex-start'    => [
-						'title' => __( 'Left', 'restimo' ),
+						'title' => __( 'Left', 'creampoint' ),
 						'icon' => 'eicon-text-align-left',
 					],
 					'center' => [
-						'title' => __( 'Center', 'restimo' ),
+						'title' => __( 'Center', 'creampoint' ),
 						'icon' => 'eicon-text-align-center',
 					],
 					'flex-end' => [
-						'title' => __( 'Right', 'restimo' ),
+						'title' => __( 'Right', 'creampoint' ),
 						'icon' => 'eicon-text-align-right',
 					]
 				],
@@ -66,16 +66,16 @@ class Restimo_VideoPopup extends Widget_Base{
 		$this->add_control(
 			'vlink',
 			[
-				'label' => __( 'Video Link', 'restimo' ),
+				'label' => __( 'Video Link', 'creampoint' ),
 				'type' => Controls_Manager::TEXT,
-				'placeholder' => __( 'https://your-link.com', 'restimo' ),
+				'placeholder' => __( 'https://your-link.com', 'creampoint' ),
 			]
 		);
 
 		$this->add_control(
 			'caption',
 			[
-				'label' => __( 'Caption', 'restimo' ),
+				'label' => __( 'Caption', 'creampoint' ),
 				'type' => Controls_Manager::TEXT,
 			]
 		);
@@ -83,10 +83,10 @@ class Restimo_VideoPopup extends Widget_Base{
 		$this->add_control(
 			'animate',
 			[
-				'label' => __( 'Animation', 'restimo' ),
+				'label' => __( 'Animation', 'creampoint' ),
 				'type' => Controls_Manager::SWITCHER,
-				'label_on' => __( 'Yes', 'restimo' ),
-				'label_off' => __( 'No', 'restimo' ),
+				'label_on' => __( 'Yes', 'creampoint' ),
+				'label_off' => __( 'No', 'creampoint' ),
 				'return_value' => 'yes',
 				'default' => 'yes',
 			]
@@ -98,7 +98,7 @@ class Restimo_VideoPopup extends Widget_Base{
 		$this->start_controls_section(
 			'style_section',
 			[
-				'label' => __( 'Button', 'restimo' ),
+				'label' => __( 'Button', 'creampoint' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -107,7 +107,7 @@ class Restimo_VideoPopup extends Widget_Base{
 		$this->add_responsive_control(
 			'btn_width',
 			[
-				'label' => __( 'Size', 'restimo' ),
+				'label' => __( 'Size', 'creampoint' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -123,7 +123,7 @@ class Restimo_VideoPopup extends Widget_Base{
 		$this->add_responsive_control(
 			'btn_size',
 			[
-				'label' => __( 'Icon Size', 'restimo' ),
+				'label' => __( 'Icon Size', 'creampoint' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -142,14 +142,14 @@ class Restimo_VideoPopup extends Widget_Base{
 		$this->start_controls_tab(
 			'tab_button_normal',
 			[
-				'label' => __( 'Normal', 'restimo' ),
+				'label' => __( 'Normal', 'creampoint' ),
 			]
 		);
 
 		$this->add_control(
 			'btn_color',
 			[
-				'label' => __( 'Color', 'restimo' ),
+				'label' => __( 'Color', 'creampoint' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -160,7 +160,7 @@ class Restimo_VideoPopup extends Widget_Base{
 		$this->add_control(
 			'btn_border_color',
 			[
-				'label' => __( 'Border Color', 'restimo' ),
+				'label' => __( 'Border Color', 'creampoint' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -172,7 +172,7 @@ class Restimo_VideoPopup extends Widget_Base{
 		$this->add_control(
 			'btn_bg',
 			[
-				'label' => __( 'Background Color', 'restimo' ),
+				'label' => __( 'Background Color', 'creampoint' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -183,7 +183,7 @@ class Restimo_VideoPopup extends Widget_Base{
 		$this->add_control(
 			'btn_circle',
 			[
-				'label' => __( 'Animation Color', 'restimo' ),
+				'label' => __( 'Animation Color', 'creampoint' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -200,14 +200,14 @@ class Restimo_VideoPopup extends Widget_Base{
 		$this->start_controls_tab(
 			'tab_button_hover',
 			[
-				'label' => __( 'Hover', 'restimo' ),
+				'label' => __( 'Hover', 'creampoint' ),
 			]
 		);
 
 		$this->add_control(
 			'btn_hover_color',
 			[
-				'label' => __( 'Color', 'restimo' ),
+				'label' => __( 'Color', 'creampoint' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -219,7 +219,7 @@ class Restimo_VideoPopup extends Widget_Base{
 		$this->add_control(
 			'btn__hover_border_color',
 			[
-				'label' => __( 'Border Color', 'restimo' ),
+				'label' => __( 'Border Color', 'creampoint' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -230,7 +230,7 @@ class Restimo_VideoPopup extends Widget_Base{
 		$this->add_control(
 			'btn_hover_bg',
 			[
-				'label' => __( 'Background Color', 'restimo' ),
+				'label' => __( 'Background Color', 'creampoint' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -241,7 +241,7 @@ class Restimo_VideoPopup extends Widget_Base{
 		$this->add_control(
 			'btn_hover_circle',
 			[
-				'label' => __( 'Animation Color', 'restimo' ),
+				'label' => __( 'Animation Color', 'creampoint' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -262,7 +262,7 @@ class Restimo_VideoPopup extends Widget_Base{
 		$this->start_controls_section(
 			'caption_section',
 			[
-				'label' => __( 'Caption', 'restimo' ),
+				'label' => __( 'Caption', 'creampoint' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 				'condition' => [
 					'caption!'  => ''
@@ -273,7 +273,7 @@ class Restimo_VideoPopup extends Widget_Base{
 		$this->add_control(
 			'caption_color',
 			[
-				'label' => __( 'Color', 'restimo' ),
+				'label' => __( 'Color', 'creampoint' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -291,7 +291,7 @@ class Restimo_VideoPopup extends Widget_Base{
 		$this->add_responsive_control(
 			'caption_space',
 			[
-				'label' => __( 'Spacing', 'restimo' ),
+				'label' => __( 'Spacing', 'creampoint' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -329,5 +329,5 @@ class Restimo_VideoPopup extends Widget_Base{
 	}
 
 }
-// After the Restimo_VideoPopup class is defined, I must register the new widget class with Elementor:
-Plugin::instance()->widgets_manager->register( new Restimo_VideoPopup() );
+// After the CreamPoint_VideoPopup class is defined, I must register the new widget class with Elementor:
+Plugin::instance()->widgets_manager->register( new CreamPoint_VideoPopup() );

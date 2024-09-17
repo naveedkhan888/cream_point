@@ -19,7 +19,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
 
-if ( restimo_get_shop_layout() === 'full-content' ) {
+if ( creampoint_get_shop_layout() === 'full-content' ) {
 	return;
 }
 

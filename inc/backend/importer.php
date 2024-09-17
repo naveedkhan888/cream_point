@@ -2,7 +2,7 @@
 /**
  * Hooks for importer
  *
- * @package Restimo
+ * @package CreamPoint
  */
 
 
@@ -12,7 +12,7 @@
  * @since  1.0
  *
  */
-function restimo_importer() {
+function creampoint_importer() {
 	return array(
 		array(
 			'name'       => 'Home Main',
@@ -131,4 +131,4 @@ function restimo_importer() {
 	);
 }
 
-add_filter( 'soo_demo_packages', 'restimo_importer', 30 );
+add_filter( 'soo_demo_packages', 'creampoint_importer', 30 );

@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measu
 /**
  * Widget Name: Pricing Table
  */
-class Restimo_Pricing_Table extends Widget_Base{
+class CreamPoint_Pricing_Table extends Widget_Base{
 
  	// The get_name() method is a simple one, you just need to return a widget name that will be used in the code.
 	public function get_name() {
@@ -14,7 +14,7 @@ class Restimo_Pricing_Table extends Widget_Base{
 
 	// The get_title() method, which again, is a very simple one, you need to return the widget title that will be displayed as the widget label.
 	public function get_title() {
-		return __( 'XP Pricing Table', 'restimo' );
+		return __( 'XP Pricing Table', 'creampoint' );
 	}
 
 	// The get_icon() method, is an optional but recommended method, it lets you set the widget icon. you can use any of the eicon or font-awesome icons, simply return the class name as a string.
@@ -24,7 +24,7 @@ class Restimo_Pricing_Table extends Widget_Base{
 
 	// The get_categories method, lets you set the category of the widget, return the category name as a string.
 	public function get_categories() {
-		return [ 'category_restimo' ];
+		return [ 'category_creampoint' ];
 	}
 
 	protected function register_controls() {
@@ -33,17 +33,17 @@ class Restimo_Pricing_Table extends Widget_Base{
 		$this->start_controls_section(
 			'content_section',
 			[
-				'label' => __( 'Pricing Table', 'restimo' ),
+				'label' => __( 'Pricing Table', 'creampoint' ),
 			]
 		);
 
 		$this->add_control(
 			'is_featured',
 			[
-				'label' => __( 'Pricing Table Featured', 'restimo' ),
+				'label' => __( 'Pricing Table Featured', 'creampoint' ),
 				'type' => Controls_Manager::SWITCHER,
-				'label_on' => __( 'Yes', 'restimo' ),
-				'label_off' => __( 'No', 'restimo' ),
+				'label_on' => __( 'Yes', 'creampoint' ),
+				'label_off' => __( 'No', 'creampoint' ),
 				'return_value' => 'yes',
 				'default' => '',
 			]
@@ -52,9 +52,9 @@ class Restimo_Pricing_Table extends Widget_Base{
 		$this->add_control(
 			'title',
 			[
-				'label' => __( 'Title', 'restimo' ),
+				'label' => __( 'Title', 'creampoint' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => __( 'Standard', 'restimo' ),
+				'default' => __( 'Standard', 'creampoint' ),
 				'label_block' => true,
 			]
 		);
@@ -62,9 +62,9 @@ class Restimo_Pricing_Table extends Widget_Base{
 		$this->add_control(
 			'price',
 			[
-				'label' => __( 'Price', 'restimo' ),
+				'label' => __( 'Price', 'creampoint' ),
 				'type' => Controls_Manager::TEXTAREA,
-				'default' => __( '<sup>$</sup> 29', 'restimo' ),
+				'default' => __( '<sup>$</sup> 29', 'creampoint' ),
 				'label_block' => true,
 			]
 		);
@@ -72,9 +72,9 @@ class Restimo_Pricing_Table extends Widget_Base{
 		$this->add_control(
 			'price_for',
 			[
-				'label' => __( 'Text Under Price', 'restimo' ),
+				'label' => __( 'Text Under Price', 'creampoint' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => __( 'per m2', 'restimo' ),
+				'default' => __( 'per m2', 'creampoint' ),
 				'label_block' => true,
 			]
 		);
@@ -84,7 +84,7 @@ class Restimo_Pricing_Table extends Widget_Base{
 			[
 				'label' => 'Short Text',
 				'type' => Controls_Manager::TEXTAREA,
-				'default' => __( 'Discover the emerging technologies most relevant to your strategy by working.', 'restimo' ),
+				'default' => __( 'Discover the emerging technologies most relevant to your strategy by working.', 'creampoint' ),
 			]
 		);
 
@@ -93,7 +93,7 @@ class Restimo_Pricing_Table extends Widget_Base{
 			[
 				'label' => 'Details',
 				'type' => Controls_Manager::TEXTAREA,
-				'default' => __( '<ul><li class="active">Structure of a project</li><li class="active">Measurement of the room</li><li>3D-Visualization of premises</li></ul>', 'restimo' ),
+				'default' => __( '<ul><li class="active">Structure of a project</li><li class="active">Measurement of the room</li><li>3D-Visualization of premises</li></ul>', 'creampoint' ),
 			]
 		);
 
@@ -102,16 +102,16 @@ class Restimo_Pricing_Table extends Widget_Base{
 			[
 				'label' => 'Button',
 				'type' => Controls_Manager::TEXTAREA,
-				'default' => __( 'Choose Plane', 'restimo' ),
+				'default' => __( 'Choose Plane', 'creampoint' ),
 			]
 		);
 
 		$this->add_control(
 			'link',
 			[
-				'label' => __( 'Link', 'restimo' ),
+				'label' => __( 'Link', 'creampoint' ),
 				'type' => Controls_Manager::URL,
-				'placeholder' => __( 'https://your-link.com', 'restimo' ),
+				'placeholder' => __( 'https://your-link.com', 'creampoint' ),
 				'condition' => [
 					'label_link!' => '',
 				],
@@ -124,14 +124,14 @@ class Restimo_Pricing_Table extends Widget_Base{
 		$this->start_controls_section(
 			'style_table_section',
 			[
-				'label' => __( 'Table', 'restimo' ),
+				'label' => __( 'Table', 'creampoint' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
 		$this->add_responsive_control(
 			'box_padding',
 			[
-				'label' => __( 'Padding Box', 'restimo' ),
+				'label' => __( 'Padding Box', 'creampoint' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', 'em', '%' ],
 				'selectors' => [
@@ -142,7 +142,7 @@ class Restimo_Pricing_Table extends Widget_Base{
 		$this->add_control(
 			'radius_box',
 			[
-				'label' => __( 'Border Radius', 'restimo' ),
+				'label' => __( 'Border Radius', 'creampoint' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors' => [
@@ -153,7 +153,7 @@ class Restimo_Pricing_Table extends Widget_Base{
 		$this->add_control(
 			'bg_box',
 			[
-				'label' => __( 'Background', 'restimo' ),
+				'label' => __( 'Background', 'creampoint' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -182,7 +182,7 @@ class Restimo_Pricing_Table extends Widget_Base{
 		$this->start_controls_section(
 			'style_content_section',
 			[
-				'label' => __( 'Content', 'restimo' ),
+				'label' => __( 'Content', 'creampoint' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -191,7 +191,7 @@ class Restimo_Pricing_Table extends Widget_Base{
 		$this->add_control(
 			'heading_title',
 			[
-				'label' => __( 'Title', 'restimo' ),
+				'label' => __( 'Title', 'creampoint' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -199,7 +199,7 @@ class Restimo_Pricing_Table extends Widget_Base{
 		$this->add_responsive_control(
 			'title_spacing',
 			[
-				'label' => __( 'Spacing', 'restimo' ),
+				'label' => __( 'Spacing', 'creampoint' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -215,7 +215,7 @@ class Restimo_Pricing_Table extends Widget_Base{
 		$this->add_control(
 			'title_color',
 			[
-				'label' => __( 'Color', 'restimo' ),
+				'label' => __( 'Color', 'creampoint' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -226,7 +226,7 @@ class Restimo_Pricing_Table extends Widget_Base{
 		$this->add_control(
 			'title_bgcolor',
 			[
-				'label' => __( 'Background', 'restimo' ),
+				'label' => __( 'Background', 'creampoint' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -246,7 +246,7 @@ class Restimo_Pricing_Table extends Widget_Base{
 		$this->add_control(
 			'heading_price',
 			[
-				'label' => __( 'Price', 'restimo' ),
+				'label' => __( 'Price', 'creampoint' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -254,7 +254,7 @@ class Restimo_Pricing_Table extends Widget_Base{
 		$this->add_responsive_control(
 			'price_space',
 			[
-				'label' => __( 'Spacing', 'restimo' ),
+				'label' => __( 'Spacing', 'creampoint' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -270,7 +270,7 @@ class Restimo_Pricing_Table extends Widget_Base{
 		$this->add_control(
 			'price_color',
 			[
-				'label' => __( 'Color', 'restimo' ),
+				'label' => __( 'Color', 'creampoint' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -290,7 +290,7 @@ class Restimo_Pricing_Table extends Widget_Base{
 		$this->add_control(
 			'heading_price_for',
 			[
-				'label' => __( 'Under Price', 'restimo' ),
+				'label' => __( 'Under Price', 'creampoint' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -298,7 +298,7 @@ class Restimo_Pricing_Table extends Widget_Base{
 		$this->add_control(
 			'price_for_color',
 			[
-				'label' => __( 'Color', 'restimo' ),
+				'label' => __( 'Color', 'creampoint' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -319,7 +319,7 @@ class Restimo_Pricing_Table extends Widget_Base{
 		$this->add_control(
 			'heading_stext',
 			[
-				'label' => __( 'Short Text', 'restimo' ),
+				'label' => __( 'Short Text', 'creampoint' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -327,7 +327,7 @@ class Restimo_Pricing_Table extends Widget_Base{
 		$this->add_responsive_control(
 			'stext_spacing',
 			[
-				'label' => __( 'Spacing', 'restimo' ),
+				'label' => __( 'Spacing', 'creampoint' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -343,7 +343,7 @@ class Restimo_Pricing_Table extends Widget_Base{
 		$this->add_control(
 			'stext_color',
 			[
-				'label' => __( 'Color', 'restimo' ),
+				'label' => __( 'Color', 'creampoint' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -363,7 +363,7 @@ class Restimo_Pricing_Table extends Widget_Base{
 		$this->add_control(
 			'heading_des',
 			[
-				'label' => __( 'Details', 'restimo' ),
+				'label' => __( 'Details', 'creampoint' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -371,7 +371,7 @@ class Restimo_Pricing_Table extends Widget_Base{
 		$this->add_responsive_control(
 			'des_padding',
 			[
-				'label' => __( 'Spacing', 'restimo' ),
+				'label' => __( 'Spacing', 'creampoint' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -387,7 +387,7 @@ class Restimo_Pricing_Table extends Widget_Base{
 		$this->add_control(
 			'des_border_color',
 			[
-				'label' => __( 'Line Color', 'restimo' ),
+				'label' => __( 'Line Color', 'creampoint' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -398,7 +398,7 @@ class Restimo_Pricing_Table extends Widget_Base{
 		$this->add_control(
 			'des_color',
 			[
-				'label' => __( 'Color', 'restimo' ),
+				'label' => __( 'Color', 'creampoint' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -409,7 +409,7 @@ class Restimo_Pricing_Table extends Widget_Base{
 		$this->add_control(
 			'des_active_color',
 			[
-				'label' => __( 'Active Color', 'restimo' ),
+				'label' => __( 'Active Color', 'creampoint' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -427,10 +427,10 @@ class Restimo_Pricing_Table extends Widget_Base{
 		$this->add_control(
 			'icon_list',
 			[
-				'label' => __( 'Icon List', 'restimo' ),
+				'label' => __( 'Icon List', 'creampoint' ),
 				'type' => Controls_Manager::SWITCHER,
-				'label_on' => __( 'Yes', 'restimo' ),
-				'label_off' => __( 'No', 'restimo' ),
+				'label_on' => __( 'Yes', 'creampoint' ),
+				'label_off' => __( 'No', 'creampoint' ),
 				'return_value' => 'yes',
 				'default' => 'yes',
 			]
@@ -440,7 +440,7 @@ class Restimo_Pricing_Table extends Widget_Base{
 		$this->add_control(
 			'heading_btn',
 			[
-				'label' => __( 'Button', 'restimo' ),
+				'label' => __( 'Button', 'creampoint' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 				'condition' => [
@@ -464,7 +464,7 @@ class Restimo_Pricing_Table extends Widget_Base{
 		$this->start_controls_tab(
 			'tab_btn_normal',
 			[
-				'label' => __( 'Normal', 'restimo' ),
+				'label' => __( 'Normal', 'creampoint' ),
 				'condition' => [
 					'label_link!' => '',
 				],
@@ -474,7 +474,7 @@ class Restimo_Pricing_Table extends Widget_Base{
 		$this->add_control(
 			'btn_bg_color',
 			[
-				'label' => __( 'Background Color', 'restimo' ),
+				'label' => __( 'Background Color', 'creampoint' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -488,7 +488,7 @@ class Restimo_Pricing_Table extends Widget_Base{
 		$this->add_control(
 			'btn_color',
 			[
-				'label' => __( 'Color', 'restimo' ),
+				'label' => __( 'Color', 'creampoint' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -502,7 +502,7 @@ class Restimo_Pricing_Table extends Widget_Base{
 		$this->add_control(
 			'btn_bcolor',
 			[
-				'label' => __( 'Border Color', 'restimo' ),
+				'label' => __( 'Border Color', 'creampoint' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -518,7 +518,7 @@ class Restimo_Pricing_Table extends Widget_Base{
 		$this->start_controls_tab(
 			'tab_btn_hover',
 			[
-				'label' => __( 'Hover', 'restimo' ),
+				'label' => __( 'Hover', 'creampoint' ),
 				'condition' => [
 					'label_link!' => '',
 				],
@@ -527,7 +527,7 @@ class Restimo_Pricing_Table extends Widget_Base{
 		$this->add_control(
 			'hover_btn_bg_color',
 			[
-				'label' => __( 'Background Color', 'restimo' ),
+				'label' => __( 'Background Color', 'creampoint' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -541,7 +541,7 @@ class Restimo_Pricing_Table extends Widget_Base{
 		$this->add_control(
 			'hover_btn_color',
 			[
-				'label' => __( 'Color', 'restimo' ),
+				'label' => __( 'Color', 'creampoint' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -555,7 +555,7 @@ class Restimo_Pricing_Table extends Widget_Base{
 		$this->add_control(
 			'hover_btn_bcolor',
 			[
-				'label' => __( 'Border Color', 'restimo' ),
+				'label' => __( 'Border Color', 'creampoint' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -611,5 +611,5 @@ class Restimo_Pricing_Table extends Widget_Base{
 	}
 
 }
-// After the Restimo_Pricing_Table class is defined, I must register the new widget class with Elementor:
-Plugin::instance()->widgets_manager->register( new Restimo_Pricing_Table() );
+// After the CreamPoint_Pricing_Table class is defined, I must register the new widget class with Elementor:
+Plugin::instance()->widgets_manager->register( new CreamPoint_Pricing_Table() );

@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measu
 /**
  * Widget Name: Team Carousel
  */
-class Restimo_Team_Carousel extends Widget_Base{
+class CreamPoint_Team_Carousel extends Widget_Base{
 
  	// The get_name() method is a simple one, you just need to return a widget name that will be used in the code.
 	public function get_name() {
@@ -14,7 +14,7 @@ class Restimo_Team_Carousel extends Widget_Base{
 
 	// The get_title() method, which again, is a very simple one, you need to return the widget title that will be displayed as the widget label.
 	public function get_title() {
-		return __( 'XP Team Carousel', 'restimo' );
+		return __( 'XP Team Carousel', 'creampoint' );
 	}
 
 	// The get_icon() method, is an optional but recommended method, it lets you set the widget icon. you can use any of the eicon or font-awesome icons, simply return the class name as a string.
@@ -24,7 +24,7 @@ class Restimo_Team_Carousel extends Widget_Base{
 
 	// The get_categories method, lets you set the category of the widget, return the category name as a string.
 	public function get_categories() {
-		return [ 'category_restimo' ];
+		return [ 'category_creampoint' ];
 	}
 
 	protected function register_controls() {
@@ -33,7 +33,7 @@ class Restimo_Team_Carousel extends Widget_Base{
 		$this->start_controls_section(
 			'content_section',
 			[
-				'label' => esc_html__( 'Team', 'restimo' ),
+				'label' => esc_html__( 'Team', 'creampoint' ),
 			]
 		);
 
@@ -42,7 +42,7 @@ class Restimo_Team_Carousel extends Widget_Base{
 		$repeater->add_control(
 	       'member_image',
 	        [
-	            'label' => esc_html__( 'Photo', 'restimo' ),
+	            'label' => esc_html__( 'Photo', 'creampoint' ),
 	            'type'  => Controls_Manager::MEDIA,
 		    ]
 		);
@@ -50,9 +50,9 @@ class Restimo_Team_Carousel extends Widget_Base{
 	    $repeater->add_control(
 		    'member_name',
 	      	[
-	          	'label' => esc_html__( 'Name', 'restimo' ),
+	          	'label' => esc_html__( 'Name', 'creampoint' ),
 	          	'type'  => Controls_Manager::TEXT,
-				'default' => esc_html__( 'Peter Perish', 'restimo' ),
+				'default' => esc_html__( 'Peter Perish', 'creampoint' ),
 				'label_block' => true
 	    	]
 	    );
@@ -60,28 +60,28 @@ class Restimo_Team_Carousel extends Widget_Base{
 	    $repeater->add_control(
 		    'member_extra',
 	      	[
-	          	'label' => esc_html__( 'Extra/Job', 'restimo' ),
+	          	'label' => esc_html__( 'Extra/Job', 'creampoint' ),
 	          	'type'  => Controls_Manager::TEXTAREA,
-	          	'default' => esc_html__( 'co-founder of company', 'restimo' ),
+	          	'default' => esc_html__( 'co-founder of company', 'creampoint' ),
 	    	]
 	    );
 
 	    $repeater->add_control(
 			'link',
 			[
-				'label' => __( 'Link To Details', 'restimo' ),
+				'label' => __( 'Link To Details', 'creampoint' ),
 				'type' => Controls_Manager::URL,
-				'placeholder' => __( 'https://', 'restimo' ),
+				'placeholder' => __( 'https://', 'creampoint' ),
 			]
 		);
 
 		$repeater->add_control(
 			'socials',
 			[
-				'label' => __( 'Socials', 'restimo' ),
+				'label' => __( 'Socials', 'creampoint' ),
 				'type' => Controls_Manager::SWITCHER,
-				'label_on' => __( 'Show', 'restimo' ),
-				'label_off' => __( 'Hide', 'restimo' ),
+				'label_on' => __( 'Show', 'creampoint' ),
+				'label_off' => __( 'Hide', 'creampoint' ),
 				'return_value' => 'yes',
 				'default' => 'yes',
 				'separator' => 'before',
@@ -91,7 +91,7 @@ class Restimo_Team_Carousel extends Widget_Base{
 	    $repeater->add_control(
 		    'social1',
 	      	[
-	          	'label' => esc_html__( 'Icon Social 1', 'restimo' ),
+	          	'label' => esc_html__( 'Icon Social 1', 'creampoint' ),
                 'type'  => Controls_Manager::ICONS,
                 'fa4compatibility' => 'icon',
 				'default' => [
@@ -106,9 +106,9 @@ class Restimo_Team_Carousel extends Widget_Base{
 	    $repeater->add_control(
 			'social1_link',
 			[
-				'label' => __( 'Link Social 1', 'restimo' ),
+				'label' => __( 'Link Social 1', 'creampoint' ),
 				'type' => Controls_Manager::URL,
-				'placeholder' => __( 'https://twitter.com/', 'restimo' ),
+				'placeholder' => __( 'https://twitter.com/', 'creampoint' ),
 				'condition' => [
 					'socials' => 'yes',
 				],
@@ -118,7 +118,7 @@ class Restimo_Team_Carousel extends Widget_Base{
 		$repeater->add_control(
 		    'social2',
 	      	[
-	          	'label' => esc_html__( 'Icon Social 2', 'restimo' ),
+	          	'label' => esc_html__( 'Icon Social 2', 'creampoint' ),
                 'type'  => Controls_Manager::ICONS,
                 'fa4compatibility' => 'icon',
 				'default' => [
@@ -134,9 +134,9 @@ class Restimo_Team_Carousel extends Widget_Base{
 	    $repeater->add_control(
 			'social2_link',
 			[
-				'label' => __( 'Link Social 2', 'restimo' ),
+				'label' => __( 'Link Social 2', 'creampoint' ),
 				'type' => Controls_Manager::URL,
-				'placeholder' => __( 'https://facebook.com/', 'restimo' ),
+				'placeholder' => __( 'https://facebook.com/', 'creampoint' ),
 				'condition' => [
 					'socials' => 'yes',
 				],
@@ -146,7 +146,7 @@ class Restimo_Team_Carousel extends Widget_Base{
 		$repeater->add_control(
 		    'social3',
 	      	[
-	          	'label' => esc_html__( 'Icon Social 3', 'restimo' ),
+	          	'label' => esc_html__( 'Icon Social 3', 'creampoint' ),
                 'type'  => Controls_Manager::ICONS,
                 'fa4compatibility' => 'icon',
 				'default' => [
@@ -162,9 +162,9 @@ class Restimo_Team_Carousel extends Widget_Base{
 	    $repeater->add_control(
 			'social3_link',
 			[
-				'label' => __( 'Link Social 3', 'restimo' ),
+				'label' => __( 'Link Social 3', 'creampoint' ),
 				'type' => Controls_Manager::URL,
-				'placeholder' => __( 'https://pinterest.com/', 'restimo' ),
+				'placeholder' => __( 'https://pinterest.com/', 'creampoint' ),
 				'condition' => [
 					'socials' => 'yes',
 				],
@@ -174,7 +174,7 @@ class Restimo_Team_Carousel extends Widget_Base{
 		$this->add_control(
 		    'members',
 		    [
-		        'label'       => esc_html__( 'Team', 'restimo' ),
+		        'label'       => esc_html__( 'Team', 'creampoint' ),
 		        'type'        => Controls_Manager::REPEATER,
 		        'show_label'  => false,
 		        'default'     => [],
@@ -198,10 +198,10 @@ class Restimo_Team_Carousel extends Widget_Base{
 		$this->add_responsive_control(
 			'tshow',
 			[
-				'label' => __( 'Slides To Show', 'restimo' ),
+				'label' => __( 'Slides To Show', 'creampoint' ),
 				'type' => Controls_Manager::SELECT,
 				'options' => [
-					'' => __( 'Default', 'restimo' ),
+					'' => __( 'Default', 'creampoint' ),
 				] + $slides_show,
 				'default' => ''
 			]
@@ -209,31 +209,31 @@ class Restimo_Team_Carousel extends Widget_Base{
 		$this->add_control(
 			'loop',
 			[
-				'label' => __( 'Loop', 'restimo' ),
+				'label' => __( 'Loop', 'creampoint' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'false',
 				'options' => [
-					'true' => __( 'Yes', 'restimo' ),
-					'false' => __( 'No', 'restimo' ),
+					'true' => __( 'Yes', 'creampoint' ),
+					'false' => __( 'No', 'creampoint' ),
 				]
 			]
 		);
 		$this->add_control(
 			'autoplay',
 			[
-				'label' => __( 'Autoplay', 'restimo' ),
+				'label' => __( 'Autoplay', 'creampoint' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'true',
 				'options' => [
-					'true' => __( 'Yes', 'restimo' ),
-					'false' => __( 'No', 'restimo' ),
+					'true' => __( 'Yes', 'creampoint' ),
+					'false' => __( 'No', 'creampoint' ),
 				]
 			]
 		);
 		$this->add_control(
 			'timeout',
 			[
-				'label' => __( 'Autoplay Timeout', 'restimo' ),
+				'label' => __( 'Autoplay Timeout', 'creampoint' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -253,31 +253,31 @@ class Restimo_Team_Carousel extends Widget_Base{
 		$this->add_control(
 			'arrows',
 			[
-				'label' => __( 'Arrows', 'restimo' ),
+				'label' => __( 'Arrows', 'creampoint' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'false',
 				'options' => [
-					'true'   => __( 'Yes', 'restimo' ),
-					'false'  => __( 'No', 'restimo' ),
+					'true'   => __( 'Yes', 'creampoint' ),
+					'false'  => __( 'No', 'creampoint' ),
 				],
 			]
 		);
 		$this->add_control(
 			'dots',
 			[
-				'label' => __( 'Dots', 'restimo' ),
+				'label' => __( 'Dots', 'creampoint' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'true',
 				'options' => [
-					'true'   => __( 'Yes', 'restimo' ),
-					'false'  => __( 'No', 'restimo' ),
+					'true'   => __( 'Yes', 'creampoint' ),
+					'false'  => __( 'No', 'creampoint' ),
 				],
 			]
 		);
 		$this->add_responsive_control(
 			'w_gaps',
 			[
-				'label' => __( 'Gap Width', 'restimo' ),
+				'label' => __( 'Gap Width', 'creampoint' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -294,7 +294,7 @@ class Restimo_Team_Carousel extends Widget_Base{
 		$this->start_controls_section(
 			'content_style',
 			[
-				'label' => esc_html__( 'General', 'restimo' ),
+				'label' => esc_html__( 'General', 'creampoint' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -302,7 +302,7 @@ class Restimo_Team_Carousel extends Widget_Base{
 		$this->add_control(
 			'radius_box',
 			[
-				'label' => __( 'Border Radius', 'restimo' ),
+				'label' => __( 'Border Radius', 'creampoint' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors' => [
@@ -324,14 +324,14 @@ class Restimo_Team_Carousel extends Widget_Base{
 		$this->start_controls_section(
 			'info_style',
 			[
-				'label' => esc_html__( 'Info Box', 'restimo' ),
+				'label' => esc_html__( 'Info Box', 'creampoint' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
 		$this->add_control(
 			'heading_info_box',
 			[
-				'label' => __( 'General', 'restimo' ),
+				'label' => __( 'General', 'creampoint' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -339,19 +339,19 @@ class Restimo_Team_Carousel extends Widget_Base{
 		$this->add_responsive_control(
 			'align',
 			[
-				'label' => __( 'Alignment', 'restimo' ),
+				'label' => __( 'Alignment', 'creampoint' ),
 				'type' => Controls_Manager::CHOOSE,
 				'options' => [
 					'left'    => [
-						'title' => __( 'Left', 'restimo' ),
+						'title' => __( 'Left', 'creampoint' ),
 						'icon' => 'eicon-text-align-left',
 					],
 					'center' => [
-						'title' => __( 'Center', 'restimo' ),
+						'title' => __( 'Center', 'creampoint' ),
 						'icon' => 'eicon-text-align-center',
 					],
 					'right' => [
-						'title' => __( 'Right', 'restimo' ),
+						'title' => __( 'Right', 'creampoint' ),
 						'icon' => 'eicon-text-align-right',
 					]
 				],
@@ -363,7 +363,7 @@ class Restimo_Team_Carousel extends Widget_Base{
 		$this->add_responsive_control(
 			'padding_box',
 			[
-				'label' => __( 'Padding Box', 'restimo' ),
+				'label' => __( 'Padding Box', 'creampoint' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors' => [
@@ -374,7 +374,7 @@ class Restimo_Team_Carousel extends Widget_Base{
 		$this->add_control(
 			'bg_box',
 			[
-				'label' => __( 'Background', 'restimo' ),
+				'label' => __( 'Background', 'creampoint' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -393,7 +393,7 @@ class Restimo_Team_Carousel extends Widget_Base{
 		$this->add_control(
 			'heading_title',
 			[
-				'label' => __( 'Title', 'restimo' ),
+				'label' => __( 'Title', 'creampoint' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -402,7 +402,7 @@ class Restimo_Team_Carousel extends Widget_Base{
 		$this->add_responsive_control(
 			'title_space',
 			[
-				'label' => esc_html__( 'Spacing', 'restimo' ),
+				'label' => esc_html__( 'Spacing', 'creampoint' ),
 				'type'  => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -419,7 +419,7 @@ class Restimo_Team_Carousel extends Widget_Base{
 		$this->add_control(
 			'title_color',
 			[
-				'label'     => esc_html__( 'Color', 'restimo' ),
+				'label'     => esc_html__( 'Color', 'creampoint' ),
 				'type'      => Controls_Manager::COLOR,
 				'default'   => '',
 				'selectors' => [
@@ -430,7 +430,7 @@ class Restimo_Team_Carousel extends Widget_Base{
 		$this->add_control(
 			'title_hcolor',
 			[
-				'label'     => esc_html__( 'Color Hover', 'restimo' ),
+				'label'     => esc_html__( 'Color Hover', 'creampoint' ),
 				'type'      => Controls_Manager::COLOR,
 				'default'   => '',
 				'selectors' => [
@@ -445,7 +445,7 @@ class Restimo_Team_Carousel extends Widget_Base{
 			Group_Control_Typography::get_type(),
 			[
 				'name'     => 'title_typography',
-				'label'    => esc_html__( 'Typography', 'restimo' ),
+				'label'    => esc_html__( 'Typography', 'creampoint' ),
 				'selector' => '{{WRAPPER}} .xp-team h6',
 			]
 		);
@@ -454,7 +454,7 @@ class Restimo_Team_Carousel extends Widget_Base{
 		$this->add_control(
 			'heading_job',
 			[
-				'label' => __( 'Extra/Job', 'restimo' ),
+				'label' => __( 'Extra/Job', 'creampoint' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -463,7 +463,7 @@ class Restimo_Team_Carousel extends Widget_Base{
 		$this->add_responsive_control(
 			'job_space',
 			[
-				'label' => esc_html__( 'Spacing', 'restimo' ),
+				'label' => esc_html__( 'Spacing', 'creampoint' ),
 				'type'  => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -479,7 +479,7 @@ class Restimo_Team_Carousel extends Widget_Base{
 		$this->add_control(
 			'job_color',
 			[
-				'label'     => esc_html__( 'Color', 'restimo' ),
+				'label'     => esc_html__( 'Color', 'creampoint' ),
 				'type'      => Controls_Manager::COLOR,
 				'default'   => '',
 				'selectors' => [
@@ -491,7 +491,7 @@ class Restimo_Team_Carousel extends Widget_Base{
 			Group_Control_Typography::get_type(),
 				[
 					'name'     => 'job_typography',
-					'label'    => esc_html__( 'Typography', 'restimo' ),
+					'label'    => esc_html__( 'Typography', 'creampoint' ),
 					'selector' => '{{WRAPPER}} .team-info span',
 				]
 		);
@@ -502,7 +502,7 @@ class Restimo_Team_Carousel extends Widget_Base{
 		$this->start_controls_section(
 			'icon_style',
 			[
-				'label' => esc_html__( 'Socials', 'restimo' ),
+				'label' => esc_html__( 'Socials', 'creampoint' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -510,7 +510,7 @@ class Restimo_Team_Carousel extends Widget_Base{
 		$this->add_responsive_control(
 			'icon_social_space',
 			[
-				'label' => esc_html__( 'Spacing', 'restimo' ),
+				'label' => esc_html__( 'Spacing', 'creampoint' ),
 				'type'  => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -526,7 +526,7 @@ class Restimo_Team_Carousel extends Widget_Base{
 		$this->add_control(
 			'radius_socials',
 			[
-				'label' => __( 'Border Radius', 'restimo' ),
+				'label' => __( 'Border Radius', 'creampoint' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors' => [
@@ -538,7 +538,7 @@ class Restimo_Team_Carousel extends Widget_Base{
 		$this->add_control(
 			'icon_social_color',
 			[
-				'label'     => esc_html__( 'Color', 'restimo' ),
+				'label'     => esc_html__( 'Color', 'creampoint' ),
 				'type'      => Controls_Manager::COLOR,
 				'default'   => '',
 				'selectors' => [
@@ -550,7 +550,7 @@ class Restimo_Team_Carousel extends Widget_Base{
 		$this->add_control(
 			'icon_social_bg',
 			[
-				'label'     => esc_html__( 'Background', 'restimo' ),
+				'label'     => esc_html__( 'Background', 'creampoint' ),
 				'type'      => Controls_Manager::COLOR,
 				'default'   => '',
 				'selectors' => [
@@ -561,7 +561,7 @@ class Restimo_Team_Carousel extends Widget_Base{
 		$this->add_control(
 			'icon_hover_color',
 			[
-				'label'     => esc_html__( 'Color Hover', 'restimo' ),
+				'label'     => esc_html__( 'Color Hover', 'creampoint' ),
 				'type'      => Controls_Manager::COLOR,
 				'default'   => '',
 				'selectors' => [
@@ -573,7 +573,7 @@ class Restimo_Team_Carousel extends Widget_Base{
 		$this->add_control(
 			'social_hover_bg',
 			[
-				'label'     => esc_html__( 'Background Hover', 'restimo' ),
+				'label'     => esc_html__( 'Background Hover', 'creampoint' ),
 				'type'      => Controls_Manager::COLOR,
 				'default'   => '',
 				'selectors' => [
@@ -588,7 +588,7 @@ class Restimo_Team_Carousel extends Widget_Base{
 		$this->start_controls_section(
 			'navigation_section',
 			[
-				'label' => __( 'Dots', 'restimo' ),
+				'label' => __( 'Dots', 'creampoint' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 				'condition' => [
 					'dots' => 'true',
@@ -599,7 +599,7 @@ class Restimo_Team_Carousel extends Widget_Base{
 		$this->add_responsive_control(
 			'dots_spacing',
 			[
-				'label' => __( 'Spacing', 'restimo' ),
+				'label' => __( 'Spacing', 'creampoint' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -616,7 +616,7 @@ class Restimo_Team_Carousel extends Widget_Base{
 		$this->add_control(
             'dots_bgcolor',
             [
-                'label' => __( 'Color', 'restimo' ),
+                'label' => __( 'Color', 'creampoint' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
 					'{{WRAPPER}} .owl-dots button.owl-dot span' => 'background: {{VALUE}};',
@@ -627,7 +627,7 @@ class Restimo_Team_Carousel extends Widget_Base{
         $this->add_control(
             'dots_active_bgcolor',
             [
-                'label' => __( 'Color Active', 'restimo' ),
+                'label' => __( 'Color Active', 'creampoint' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
 					'{{WRAPPER}} .owl-dots button.owl-dot.active span' => 'background: {{VALUE}};',
@@ -641,7 +641,7 @@ class Restimo_Team_Carousel extends Widget_Base{
 		$this->start_controls_section(
 			'style_nav',
 			[
-				'label' => __( 'Arrows', 'restimo' ),
+				'label' => __( 'Arrows', 'creampoint' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 				'condition' => [
 					'arrows' => 'true',
@@ -651,7 +651,7 @@ class Restimo_Team_Carousel extends Widget_Base{
 		$this->add_responsive_control(
 			'arrow_spacing',
 			[
-				'label' => __( 'Spacing', 'restimo' ),
+				'label' => __( 'Spacing', 'creampoint' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -668,7 +668,7 @@ class Restimo_Team_Carousel extends Widget_Base{
 		$this->add_responsive_control(
 			'arrow_width',
 			[
-				'label' => __( 'Width', 'restimo' ),
+				'label' => __( 'Width', 'creampoint' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -684,7 +684,7 @@ class Restimo_Team_Carousel extends Widget_Base{
 		$this->add_control(
 			'arrow_color',
 			[
-				'label' => __( 'Color', 'restimo' ),
+				'label' => __( 'Color', 'creampoint' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -696,7 +696,7 @@ class Restimo_Team_Carousel extends Widget_Base{
 		$this->add_control(
 			'arrow_bg_color',
 			[
-				'label' => __( 'Background', 'restimo' ),
+				'label' => __( 'Background', 'creampoint' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -707,7 +707,7 @@ class Restimo_Team_Carousel extends Widget_Base{
 		$this->add_control(
 			'arrow_hcolor',
 			[
-				'label' => __( 'Color Hover', 'restimo' ),
+				'label' => __( 'Color Hover', 'creampoint' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -718,7 +718,7 @@ class Restimo_Team_Carousel extends Widget_Base{
 		$this->add_control(
 			'arrow_bg_hcolor',
 			[
-				'label' => __( 'Background Hover', 'restimo' ),
+				'label' => __( 'Background Hover', 'creampoint' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -729,7 +729,7 @@ class Restimo_Team_Carousel extends Widget_Base{
 		$this->add_control(
 			'radius_arrow',
 			[
-				'label' => __( 'Border Radius', 'restimo' ),
+				'label' => __( 'Border Radius', 'creampoint' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors' => [
@@ -820,5 +820,5 @@ class Restimo_Team_Carousel extends Widget_Base{
 	    <?php
 	}
 }
-// After the Restimo_Team_Carousel class is defined, I must register the new widget class with Elementor:
-Plugin::instance()->widgets_manager->register( new Restimo_Team_Carousel() );
+// After the CreamPoint_Team_Carousel class is defined, I must register the new widget class with Elementor:
+Plugin::instance()->widgets_manager->register( new CreamPoint_Team_Carousel() );

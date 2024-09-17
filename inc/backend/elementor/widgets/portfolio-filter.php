@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measu
 /**
  * Widget Name: Portfolio Filter
  */
-class Restimo_PortfolioGrid extends Widget_Base{
+class CreamPoint_PortfolioGrid extends Widget_Base{
 
  	// The get_name() method is a simple one, you just need to return a widget name that will be used in the code.
 	public function get_name() {
@@ -14,7 +14,7 @@ class Restimo_PortfolioGrid extends Widget_Base{
 
 	// The get_title() method, which again, is a very simple one, you need to return the widget title that will be displayed as the widget label.
 	public function get_title() {
-		return __( 'XP Portfolio Filter', 'restimo' );
+		return __( 'XP Portfolio Filter', 'creampoint' );
 	}
 
 	// The get_icon() method, is an optional but recommended method, it lets you set the widget icon. you can use any of the eicon or font-awesome icons, simply return the class name as a string.
@@ -24,7 +24,7 @@ class Restimo_PortfolioGrid extends Widget_Base{
 
 	// The get_categories method, lets you set the category of the widget, return the category name as a string.
 	public function get_categories() {
-		return [ 'category_restimo' ];
+		return [ 'category_creampoint' ];
 	}
 
 	protected function register_controls() {
@@ -33,41 +33,41 @@ class Restimo_PortfolioGrid extends Widget_Base{
 		$this->start_controls_section(
 			'content_section',
 			[
-				'label' => __( 'General', 'restimo' ),
+				'label' => __( 'General', 'creampoint' ),
 			]
 		);
 		$this->add_control(
 			'style',
 			[
-				'label' => __( 'Style Layout', 'restimo' ),
+				'label' => __( 'Style Layout', 'creampoint' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'p-grid',
 				'options' => [
-					'p-grid'  	 => __( 'Grid', 'restimo' ),
-					'p-masonry'  => __( 'Masonry', 'restimo' ),
-					'p-metro'  => __( 'Metro', 'restimo' ),
+					'p-grid'  	 => __( 'Grid', 'creampoint' ),
+					'p-masonry'  => __( 'Masonry', 'creampoint' ),
+					'p-metro'  => __( 'Metro', 'creampoint' ),
 				],
 			]
 		);
 		$this->add_control(
 			'project_cat',
 			[
-				'label' => __( 'Select Categories', 'restimo' ),
+				'label' => __( 'Select Categories', 'creampoint' ),
 				'type' => Controls_Manager::SELECT2,
 				'options' => $this->select_param_cate_project(),
 				'multiple' => true,
 				'label_block' => true,
-				'placeholder' => __( 'All Categories', 'restimo' ),
+				'placeholder' => __( 'All Categories', 'creampoint' ),
 				'separator' => 'before',
 			]
 		);
 		$this->add_control(
 			'filter',
 			[
-				'label' => __( 'Show Filter', 'restimo' ),
+				'label' => __( 'Show Filter', 'creampoint' ),
 				'type' => Controls_Manager::SWITCHER,
-				'label_on' => __( 'Show', 'restimo' ),
-				'label_off' => __( 'Hide', 'restimo' ),
+				'label_on' => __( 'Show', 'creampoint' ),
+				'label_off' => __( 'Hide', 'creampoint' ),
 				'return_value' => 'yes',
 				'default' => 'yes',
 				'separator' => 'before',
@@ -76,7 +76,7 @@ class Restimo_PortfolioGrid extends Widget_Base{
 		$this->add_control(
 			'all_text',
 			[
-				'label' => __( 'All Text', 'restimo' ),
+				'label' => __( 'All Text', 'creampoint' ),
 				'type' => Controls_Manager::TEXT,
 				'default' => 'All',
 				'condition' => [
@@ -87,10 +87,10 @@ class Restimo_PortfolioGrid extends Widget_Base{
 		$this->add_control(
 			'count',
 			[
-				'label' => __( 'Show Count', 'restimo' ),
+				'label' => __( 'Show Count', 'creampoint' ),
 				'type' => Controls_Manager::SWITCHER,
-				'label_on' => __( 'Show', 'restimo' ),
-				'label_off' => __( 'Hide', 'restimo' ),
+				'label_on' => __( 'Show', 'creampoint' ),
+				'label_off' => __( 'Hide', 'creampoint' ),
 				'return_value' => 'yes',
 				'default' => 'yes',
 				'condition' => [
@@ -101,10 +101,10 @@ class Restimo_PortfolioGrid extends Widget_Base{
 		$this->add_control(
 			'arrow',
 			[
-				'label' => __( 'Show Arrow', 'restimo' ),
+				'label' => __( 'Show Arrow', 'creampoint' ),
 				'type' => Controls_Manager::SWITCHER,
-				'label_on' => __( 'Show', 'restimo' ),
-				'label_off' => __( 'Hide', 'restimo' ),
+				'label_on' => __( 'Show', 'creampoint' ),
+				'label_off' => __( 'Hide', 'creampoint' ),
 				'return_value' => 'yes',
 				'default' => 'yes',
 				'condition' => [
@@ -115,14 +115,14 @@ class Restimo_PortfolioGrid extends Widget_Base{
 		$this->add_control(
 			'column',
 			[
-				'label' => __( 'Columns', 'restimo' ),
+				'label' => __( 'Columns', 'creampoint' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'pf_3_cols',
 				'options' => [
-					'pf_2_cols' => __( '2 Column', 'restimo' ),
-					'pf_3_cols'	=> __( '3 Column', 'restimo' ),
-					'pf_4_cols' => __( '4 Column', 'restimo' ),
-					'pf_5_cols' => __( '5 Column', 'restimo' ),
+					'pf_2_cols' => __( '2 Column', 'creampoint' ),
+					'pf_3_cols'	=> __( '3 Column', 'creampoint' ),
+					'pf_4_cols' => __( '4 Column', 'creampoint' ),
+					'pf_5_cols' => __( '5 Column', 'creampoint' ),
 				],
 				'separator' => 'before',
 			]
@@ -130,7 +130,7 @@ class Restimo_PortfolioGrid extends Widget_Base{
 		$this->add_responsive_control(
 			'w_gaps',
 			[
-				'label' => __( 'Gap Width', 'restimo' ),
+				'label' => __( 'Gap Width', 'creampoint' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -149,7 +149,7 @@ class Restimo_PortfolioGrid extends Widget_Base{
 		$this->add_control(
 			'project_num',
 			[
-				'label' => __( 'Show Number Projects', 'restimo' ),
+				'label' => __( 'Show Number Projects', 'creampoint' ),
 				'type' => Controls_Manager::NUMBER,
 				'default' => '6',
 				'separator' => 'before',
@@ -158,7 +158,7 @@ class Restimo_PortfolioGrid extends Widget_Base{
 		$this->add_control(
 			'load_more',
 			[
-				'label' => __( 'Load More Button', 'restimo' ),
+				'label' => __( 'Load More Button', 'creampoint' ),
 				'type' => Controls_Manager::TEXT,
 				'default' => 'Load More',
 				'separator' => 'before',
@@ -167,7 +167,7 @@ class Restimo_PortfolioGrid extends Widget_Base{
 		$this->add_control(
 			'loading_more',
 			[
-				'label' => __( 'Loading Text', 'restimo' ),
+				'label' => __( 'Loading Text', 'creampoint' ),
 				'type' => Controls_Manager::TEXT,
 				'default' => 'Loading...',
 				'condition' => [
@@ -178,7 +178,7 @@ class Restimo_PortfolioGrid extends Widget_Base{
 		$this->add_control(
 			'p_more',
 			[
-				'label' => __( 'Load Number Projects', 'restimo' ),
+				'label' => __( 'Load Number Projects', 'creampoint' ),
 				'type' => Controls_Manager::NUMBER,
 				'default' => '3',
 				'condition' => [
@@ -189,13 +189,13 @@ class Restimo_PortfolioGrid extends Widget_Base{
 		$this->add_control(
 			'layout',
 			[
-				'label' => __( 'Info Box Style', 'restimo' ),
+				'label' => __( 'Info Box Style', 'creampoint' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'style-1',
 				'options' => [
-					'style-1'  	=> __( 'Background Overlay', 'restimo' ),
-					'style-2' 	=> __( 'Background Solid', 'restimo' ),
-					'style-3' 	=> __( 'Hidden', 'restimo' ),
+					'style-1'  	=> __( 'Background Overlay', 'creampoint' ),
+					'style-2' 	=> __( 'Background Solid', 'creampoint' ),
+					'style-3' 	=> __( 'Hidden', 'creampoint' ),
 				],
 				'separator' => 'before',
 			]
@@ -203,10 +203,10 @@ class Restimo_PortfolioGrid extends Widget_Base{
 		$this->add_control(
 			'popup_thumb',
 			[
-				'label' => __( 'Popup Gallery', 'restimo' ),
+				'label' => __( 'Popup Gallery', 'creampoint' ),
 				'type' => Controls_Manager::SWITCHER,
-				'label_on' => __( 'Yes', 'restimo' ),
-				'label_off' => __( 'No', 'restimo' ),
+				'label_on' => __( 'Yes', 'creampoint' ),
+				'label_off' => __( 'No', 'creampoint' ),
 				'return_value' => 'yes',
 				'default' => 'yes',
 				'condition' => [
@@ -220,7 +220,7 @@ class Restimo_PortfolioGrid extends Widget_Base{
 		$this->start_controls_section(
 			'filter_style_section',
 			[
-				'label' => __( 'Filter', 'restimo' ),
+				'label' => __( 'Filter', 'creampoint' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 				'condition' => [
 					'filter' => 'yes',
@@ -230,19 +230,19 @@ class Restimo_PortfolioGrid extends Widget_Base{
 		$this->add_responsive_control(
 			'filter_align',
 			[
-				'label' => __( 'Alignment', 'restimo' ),
+				'label' => __( 'Alignment', 'creampoint' ),
 				'type' => Controls_Manager::CHOOSE,
 				'options' => [
 					'left'    => [
-						'title' => __( 'Left', 'restimo' ),
+						'title' => __( 'Left', 'creampoint' ),
 						'icon' => 'eicon-text-align-left',
 					],
 					'center' => [
-						'title' => __( 'Center', 'restimo' ),
+						'title' => __( 'Center', 'creampoint' ),
 						'icon' => 'eicon-text-align-center',
 					],
 					'right' => [
-						'title' => __( 'Right', 'restimo' ),
+						'title' => __( 'Right', 'creampoint' ),
 						'icon' => 'eicon-text-align-right',
 					]
 				],
@@ -255,7 +255,7 @@ class Restimo_PortfolioGrid extends Widget_Base{
 		$this->add_responsive_control(
 			'filter_spacing',
 			[
-				'label' => __( 'Spacing', 'restimo' ),
+				'label' => __( 'Spacing', 'creampoint' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -271,7 +271,7 @@ class Restimo_PortfolioGrid extends Widget_Base{
 		$this->add_control(
 			'filter_color',
 			[
-				'label' => __( 'Button Color', 'restimo' ),
+				'label' => __( 'Button Color', 'creampoint' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -282,7 +282,7 @@ class Restimo_PortfolioGrid extends Widget_Base{
 		$this->add_control(
 			'filter_hcolor',
 			[
-				'label' => __( 'Active Color', 'restimo' ),
+				'label' => __( 'Active Color', 'creampoint' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -300,7 +300,7 @@ class Restimo_PortfolioGrid extends Widget_Base{
 		$this->add_control(
 			'count_color',
 			[
-				'label' => __( 'Count Color', 'restimo' ),
+				'label' => __( 'Count Color', 'creampoint' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -328,14 +328,14 @@ class Restimo_PortfolioGrid extends Widget_Base{
 		$this->start_controls_section(
 			'overlay_style_section',
 			[
-				'label' => __( 'Project Items', 'restimo' ),
+				'label' => __( 'Project Items', 'creampoint' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
 		$this->add_control(
 			'heading_general',
 			[
-				'label' => __( 'General', 'restimo' ),
+				'label' => __( 'General', 'creampoint' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -343,19 +343,19 @@ class Restimo_PortfolioGrid extends Widget_Base{
 		$this->add_responsive_control(
 			'overlay_align',
 			[
-				'label' => __( 'Alignment Info', 'restimo' ),
+				'label' => __( 'Alignment Info', 'creampoint' ),
 				'type' => Controls_Manager::CHOOSE,
 				'options' => [
 					'left'    => [
-						'title' => __( 'Left', 'restimo' ),
+						'title' => __( 'Left', 'creampoint' ),
 						'icon' => 'eicon-text-align-left',
 					],
 					'center' => [
-						'title' => __( 'Center', 'restimo' ),
+						'title' => __( 'Center', 'creampoint' ),
 						'icon' => 'eicon-text-align-center',
 					],
 					'right' => [
-						'title' => __( 'Right', 'restimo' ),
+						'title' => __( 'Right', 'creampoint' ),
 						'icon' => 'eicon-text-align-right',
 					],
 				],				
@@ -370,20 +370,20 @@ class Restimo_PortfolioGrid extends Widget_Base{
 		$this->add_control(
 			'position',
 			[
-				'label' => __( 'Position Info', 'restimo' ),
+				'label' => __( 'Position Info', 'creampoint' ),
 				'type' => Controls_Manager::CHOOSE,
 				'default' => 'top',
 				'options' => [
 					'flex-start' => [
-						'title' => __( 'Top', 'restimo' ),
+						'title' => __( 'Top', 'creampoint' ),
 						'icon' => 'eicon-v-align-top',
 					],
 					'center' => [
-						'title' => __( 'Middle', 'restimo' ),
+						'title' => __( 'Middle', 'creampoint' ),
 						'icon' => 'eicon-v-align-middle',
 					],
 					'flex-end' => [
-						'title' => __( 'Bottom', 'restimo' ),
+						'title' => __( 'Bottom', 'creampoint' ),
 						'icon' => 'eicon-v-align-bottom',
 					],
 				],
@@ -398,7 +398,7 @@ class Restimo_PortfolioGrid extends Widget_Base{
 		$this->add_control(
 			'overlay_background',
 			[
-				'label' => __( 'Background Overlay', 'restimo' ),
+				'label' => __( 'Background Overlay', 'creampoint' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -412,7 +412,7 @@ class Restimo_PortfolioGrid extends Widget_Base{
 		$this->add_control(
 			'info_background',
 			[
-				'label' => __( 'Background Info', 'restimo' ),
+				'label' => __( 'Background Info', 'creampoint' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -440,10 +440,10 @@ class Restimo_PortfolioGrid extends Widget_Base{
 		$this->add_control(
 			'scale_thumb',
 			[
-				'label' => __( 'Animation Image Hover', 'restimo' ),
+				'label' => __( 'Animation Image Hover', 'creampoint' ),
 				'type' => Controls_Manager::SWITCHER,
-				'label_on' => __( 'Yes', 'restimo' ),
-				'label_off' => __( 'No', 'restimo' ),
+				'label_on' => __( 'Yes', 'creampoint' ),
+				'label_off' => __( 'No', 'creampoint' ),
 				'return_value' => 'yes',
 				'default' => 'yes',
 			]
@@ -451,7 +451,7 @@ class Restimo_PortfolioGrid extends Widget_Base{
 		$this->add_control(
 			'radius_thumb',
 			[
-				'label' => __( 'Border Radius Image', 'restimo' ),
+				'label' => __( 'Border Radius Image', 'creampoint' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -469,7 +469,7 @@ class Restimo_PortfolioGrid extends Widget_Base{
 		$this->add_control(
 			'heading_icon',
 			[
-				'label' => __( 'Icon Button', 'restimo' ),
+				'label' => __( 'Icon Button', 'creampoint' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 				'condition' => [
@@ -480,10 +480,10 @@ class Restimo_PortfolioGrid extends Widget_Base{
 		$this->add_control(
 			'show_icon',
 			[
-				'label' => __( 'Show Button', 'restimo' ),
+				'label' => __( 'Show Button', 'creampoint' ),
 				'type' => Controls_Manager::SWITCHER,
-				'label_on' => __( 'Show', 'restimo' ),
-				'label_off' => __( 'Hide', 'restimo' ),
+				'label_on' => __( 'Show', 'creampoint' ),
+				'label_off' => __( 'Hide', 'creampoint' ),
 				'return_value' => 'yes',
 				'default' => 'yes',
 				'condition' => [
@@ -494,7 +494,7 @@ class Restimo_PortfolioGrid extends Widget_Base{
 		$this->add_control(
 			'icon_color',
 			[
-				'label' => __( 'Color', 'restimo' ),
+				'label' => __( 'Color', 'creampoint' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -509,7 +509,7 @@ class Restimo_PortfolioGrid extends Widget_Base{
 		$this->add_control(
 			'icon_bg',
 			[
-				'label' => __( 'Background', 'restimo' ),
+				'label' => __( 'Background', 'creampoint' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -526,7 +526,7 @@ class Restimo_PortfolioGrid extends Widget_Base{
 		$this->add_control(
 			'heading_title',
 			[
-				'label' => __( 'Title', 'restimo' ),
+				'label' => __( 'Title', 'creampoint' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 				'condition' => [
@@ -537,7 +537,7 @@ class Restimo_PortfolioGrid extends Widget_Base{
 		$this->add_responsive_control(
 			'title_spacing',
 			[
-				'label' => __( 'Spacing', 'restimo' ),
+				'label' => __( 'Spacing', 'creampoint' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -556,7 +556,7 @@ class Restimo_PortfolioGrid extends Widget_Base{
 		$this->add_control(
 			'title_color',
 			[
-				'label' => __( 'Color', 'restimo' ),
+				'label' => __( 'Color', 'creampoint' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -570,7 +570,7 @@ class Restimo_PortfolioGrid extends Widget_Base{
 		$this->add_control(
 			'title_hcolor',
 			[
-				'label' => __( 'Hover Color', 'restimo' ),
+				'label' => __( 'Hover Color', 'creampoint' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -596,7 +596,7 @@ class Restimo_PortfolioGrid extends Widget_Base{
 		$this->add_control(
 			'heading_cat',
 			[
-				'label' => __( 'Category', 'restimo' ),
+				'label' => __( 'Category', 'creampoint' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 				'condition' => [
@@ -607,10 +607,10 @@ class Restimo_PortfolioGrid extends Widget_Base{
 		$this->add_control(
 			'show_cat',
 			[
-				'label' => __( 'Show Category', 'restimo' ),
+				'label' => __( 'Show Category', 'creampoint' ),
 				'type' => Controls_Manager::SWITCHER,
-				'label_on' => __( 'Show', 'restimo' ),
-				'label_off' => __( 'Hide', 'restimo' ),
+				'label_on' => __( 'Show', 'creampoint' ),
+				'label_off' => __( 'Hide', 'creampoint' ),
 				'return_value' => 'yes',
 				'default' => 'yes',
 				'condition' => [
@@ -621,7 +621,7 @@ class Restimo_PortfolioGrid extends Widget_Base{
 		$this->add_control(
 			'cat_color',
 			[
-				'label' => __( 'Color', 'restimo' ),
+				'label' => __( 'Color', 'creampoint' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -637,7 +637,7 @@ class Restimo_PortfolioGrid extends Widget_Base{
 		$this->add_control(
 			'cat_hcolor',
 			[
-				'label' => __( 'Hover', 'restimo' ),
+				'label' => __( 'Hover', 'creampoint' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -666,7 +666,7 @@ class Restimo_PortfolioGrid extends Widget_Base{
 		$this->start_controls_section(
 			'style_section',
 			[
-				'label' => __( 'Load More Button', 'restimo' ),
+				'label' => __( 'Load More Button', 'creampoint' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 				'condition' => [
 					'load_more[value]!' => '',
@@ -677,19 +677,19 @@ class Restimo_PortfolioGrid extends Widget_Base{
 		$this->add_responsive_control(
 			'btn_align',
 			[
-				'label' => __( 'Alignment', 'restimo' ),
+				'label' => __( 'Alignment', 'creampoint' ),
 				'type' => Controls_Manager::CHOOSE,
 				'options' => [
 					'left'    => [
-						'title' => __( 'Left', 'restimo' ),
+						'title' => __( 'Left', 'creampoint' ),
 						'icon' => 'eicon-text-align-left',
 					],
 					'center' => [
-						'title' => __( 'Center', 'restimo' ),
+						'title' => __( 'Center', 'creampoint' ),
 						'icon' => 'eicon-text-align-center',
 					],
 					'right' => [
-						'title' => __( 'Right', 'restimo' ),
+						'title' => __( 'Right', 'creampoint' ),
 						'icon' => 'eicon-text-align-right',
 					]
 				],
@@ -702,7 +702,7 @@ class Restimo_PortfolioGrid extends Widget_Base{
 		$this->add_responsive_control(
 			'btn_spacing',
 			[
-				'label' => __( 'Spacing', 'restimo' ),
+				'label' => __( 'Spacing', 'creampoint' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -721,14 +721,14 @@ class Restimo_PortfolioGrid extends Widget_Base{
 		$this->start_controls_tab(
 			'tab_button_normal',
 			[
-				'label' => __( 'Normal', 'restimo' ),
+				'label' => __( 'Normal', 'creampoint' ),
 			]
 		);
 
 		$this->add_control(
 			'button_text_color',
 			[
-				'label' => __( 'Text Color', 'restimo' ),
+				'label' => __( 'Text Color', 'creampoint' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -740,7 +740,7 @@ class Restimo_PortfolioGrid extends Widget_Base{
 		$this->add_control(
 			'background_color',
 			[
-				'label' => __( 'Background Color', 'restimo' ),
+				'label' => __( 'Background Color', 'creampoint' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .xptf-btn' => 'background-color: {{VALUE}};',
@@ -753,14 +753,14 @@ class Restimo_PortfolioGrid extends Widget_Base{
 		$this->start_controls_tab(
 			'tab_button_hover',
 			[
-				'label' => __( 'Hover', 'restimo' ),
+				'label' => __( 'Hover', 'creampoint' ),
 			]
 		);
 
 		$this->add_control(
 			'hover_color',
 			[
-				'label' => __( 'Text Color', 'restimo' ),
+				'label' => __( 'Text Color', 'creampoint' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .xptf-btn:hover, {{WRAPPER}} .xptf-btn:focus' => 'color: {{VALUE}};',
@@ -771,7 +771,7 @@ class Restimo_PortfolioGrid extends Widget_Base{
 		$this->add_control(
 			'button_background_hover_color',
 			[
-				'label' => __( 'Background Color', 'restimo' ),
+				'label' => __( 'Background Color', 'creampoint' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .xptf-btn:hover, {{WRAPPER}} .xptf-btn:focus' => 'background-color: {{VALUE}};',
@@ -908,4 +908,4 @@ class Restimo_PortfolioGrid extends Widget_Base{
 	}
 }
 // After the Schedule class is defined, I must register the new widget class with Elementor:
-Plugin::instance()->widgets_manager->register( new Restimo_PortfolioGrid() );
+Plugin::instance()->widgets_manager->register( new CreamPoint_PortfolioGrid() );

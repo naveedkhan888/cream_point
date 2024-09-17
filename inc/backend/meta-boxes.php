@@ -10,19 +10,19 @@
  *
  * @return array All registered meta boxes
  */
-function restimo_register_meta_boxes( $meta_boxes ) {
+function creampoint_register_meta_boxes( $meta_boxes ) {
 	
 	// Post format's meta box
 	$meta_boxes[] = array(
 		'id'       => 'format_detail',
-		'title'    => esc_html__( 'Format Details', 'restimo' ),
+		'title'    => esc_html__( 'Format Details', 'creampoint' ),
 		'pages'    => array( 'post' ),
 		'context'  => 'normal',
 		'priority' => 'high',
 		'autosave' => true,
 		'fields'   => array(
 			array(
-				'name'             => esc_html__( 'Image', 'restimo' ),
+				'name'             => esc_html__( 'Image', 'creampoint' ),
 				'id'               => 'post_image',
 				'type'             => 'image_advanced',
 				'class'            => 'image',
@@ -31,7 +31,7 @@ function restimo_register_meta_boxes( $meta_boxes ) {
     			'image_size'       => 'thumbnail',
 			),
 			array(
-				'name'  => esc_html__( 'Gallery', 'restimo' ),
+				'name'  => esc_html__( 'Gallery', 'creampoint' ),
 				'id'    => 'post_gallery',
 				'type'  => 'image_advanced',
 				'class' => 'gallery',
@@ -39,7 +39,7 @@ function restimo_register_meta_boxes( $meta_boxes ) {
     			'image_size'       => 'thumbnail',
 			),			
 			array(
-				'name'  => esc_html__( 'Audio', 'restimo' ),
+				'name'  => esc_html__( 'Audio', 'creampoint' ),
 				'id'    => 'post_audio',
 				'type'  => 'textarea',
 				'cols'  => 20,
@@ -48,7 +48,7 @@ function restimo_register_meta_boxes( $meta_boxes ) {
 				'desc'  => 'Example: https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/139083759',
 			),
 			array(
-				'name'  => esc_html__( 'Video', 'restimo' ),
+				'name'  => esc_html__( 'Video', 'creampoint' ),
 				'id'    => 'post_video',
 				'type'  => 'textarea',
 				'cols'  => 20,
@@ -57,14 +57,14 @@ function restimo_register_meta_boxes( $meta_boxes ) {
 				'desc'  => 'Example: https://vimeo.com/87959439',
 			),
 			array(
-				'name'  => esc_html__( 'Background Video', 'restimo' ),
+				'name'  => esc_html__( 'Background Video', 'creampoint' ),
 				'id'    => 'bg_video',
 				'type'  => 'image_advanced',
 				'class' => 'video',
 				'max_file_uploads' => 1,
 			),
 			array(
-				'name'  => esc_html__( 'Link', 'restimo' ),
+				'name'  => esc_html__( 'Link', 'creampoint' ),
 				'id'    => 'post_link',
 				'type'  => 'textarea',
 				'cols'  => 20,
@@ -72,7 +72,7 @@ function restimo_register_meta_boxes( $meta_boxes ) {
 				'class' => 'link',
 			),
 			array(
-				'name'  => esc_html__( 'Text Link', 'restimo' ),
+				'name'  => esc_html__( 'Text Link', 'creampoint' ),
 				'id'    => 'text_link',
 				'type'  => 'textarea',
 				'cols'  => 20,
@@ -80,13 +80,13 @@ function restimo_register_meta_boxes( $meta_boxes ) {
 				'class' => 'link',
 			),
 			array(
-				'name'  => esc_html__( 'Quote', 'restimo' ),
+				'name'  => esc_html__( 'Quote', 'creampoint' ),
 				'id'    => 'post_quote',
 				'type'  => 'textarea',
 				'class' => 'quote',
 			),
 			array(
-				'name'  => esc_html__( 'Quote Name', 'restimo' ),
+				'name'  => esc_html__( 'Quote Name', 'creampoint' ),
 				'id'    => 'quote_name',
 				'type'  => 'text',
 				'class' => 'quote',
@@ -97,7 +97,7 @@ function restimo_register_meta_boxes( $meta_boxes ) {
 	// Page Settings
 	$meta_boxes[] = array(
 		'id'       => 'page-settings',
-		'title'    => esc_html__( 'Page Header Settings', 'restimo' ),
+		'title'    => esc_html__( 'Page Header Settings', 'creampoint' ),
 		'pages'    => array( 'page' ),
 		'context'  => 'normal',
 		'priority' => 'high',
@@ -105,7 +105,7 @@ function restimo_register_meta_boxes( $meta_boxes ) {
 		'fields'   => array(
             array(
                 'id'        => 'page_layout',
-                'name'      => esc_html__( 'Page Layout', 'restimo' ),
+                'name'      => esc_html__( 'Page Layout', 'creampoint' ),
                 'type'      => 'image_select',
                 'options'   => array(
                     'full-content'    => get_template_directory_uri() . '/inc/backend/images/full.png',
@@ -115,7 +115,7 @@ function restimo_register_meta_boxes( $meta_boxes ) {
                 'std'       => 'full-content'
             ),
             array(
-                'name'             => esc_html__( 'Page Header On/Off', 'restimo' ),
+                'name'             => esc_html__( 'Page Header On/Off', 'creampoint' ),
                 'id'               => 'pheader_switch',
                 'type'             => 'switch',
                 'style'            => 'rounded',
@@ -124,7 +124,7 @@ function restimo_register_meta_boxes( $meta_boxes ) {
                 'std'              => 'on'
             ),
             array(
-                'name'             => esc_html__( 'Background Page Header', 'restimo' ),
+                'name'             => esc_html__( 'Background Page Header', 'creampoint' ),
                 'id'               => 'pheader_bg_image',
                 'type'             => 'image_advanced',
                 'max_file_uploads' => 1,
@@ -155,7 +155,7 @@ function restimo_register_meta_boxes( $meta_boxes ) {
 		    	),
 			),
 			array(
-                'name'             => esc_html__( 'Header Transparent?', 'restimo' ),
+                'name'             => esc_html__( 'Header Transparent?', 'creampoint' ),
                 'id'               => 'is_trans',
 				'type'             => 'select',
 				'options'   => array(
@@ -198,14 +198,14 @@ function restimo_register_meta_boxes( $meta_boxes ) {
 
 	$meta_boxes[] = array(
         'id'       => 'ppheader-settings',
-        'title'    => esc_html__( 'Page Header Settings', 'restimo' ),
+        'title'    => esc_html__( 'Page Header Settings', 'creampoint' ),
         'pages'    => array( 'xp_portfolio' ),
         'context'  => 'normal',
         'priority' => 'high',
         'autosave' => true,
         'fields'   => array(
             array(
-                'name'             => esc_html__( 'Page Header On/Off', 'restimo' ),
+                'name'             => esc_html__( 'Page Header On/Off', 'creampoint' ),
                 'id'               => 'pheader_switch',
                 'type'             => 'switch',
                 'style'            => 'rounded',
@@ -214,7 +214,7 @@ function restimo_register_meta_boxes( $meta_boxes ) {
                 'std'              => 'on'
             ),
             array(
-                'name'             => esc_html__( 'Background Page Header', 'restimo' ),
+                'name'             => esc_html__( 'Background Page Header', 'creampoint' ),
                 'id'               => 'pheader_bg_image',
                 'type'             => 'image_advanced',
                 'max_file_uploads' => 1,
@@ -223,14 +223,14 @@ function restimo_register_meta_boxes( $meta_boxes ) {
 	);
 	$meta_boxes[] = array(
         'id'       => 'case-settings',
-        'title'    => esc_html__( 'Project Settings', 'restimo' ),
+        'title'    => esc_html__( 'Project Settings', 'creampoint' ),
         'pages'    => array( 'xp_portfolio' ),
         'context'  => 'normal',
         'priority' => 'high',
         'autosave' => true,
         'fields'   => array(
             array(
-                'name'             => esc_html__( 'Carousel Image', 'restimo' ),
+                'name'             => esc_html__( 'Carousel Image', 'creampoint' ),
                 'id'               => 'slide_img',
                 'type'             => 'image_advanced',
                 'max_file_uploads' => 1,
@@ -240,7 +240,7 @@ function restimo_register_meta_boxes( $meta_boxes ) {
 
     $meta_boxes[] = array(
         'id'       => 'pthumb-settings',
-        'title'    => esc_html__( 'Thumbnail Image Settings', 'restimo' ),
+        'title'    => esc_html__( 'Thumbnail Image Settings', 'creampoint' ),
         'pages'    => array( 'xp_portfolio' ),
         'context'  => 'normal',
         'priority' => 'high',
@@ -248,7 +248,7 @@ function restimo_register_meta_boxes( $meta_boxes ) {
         'fields'   => array(
             array(
                 'id'        => 'thumb_size',
-                'name'      => esc_html__( 'Select Size', 'restimo' ),
+                'name'      => esc_html__( 'Select Size', 'creampoint' ),
                 'type'      => 'select',
                 'options'   => array(
                     'normal' 	=> 'Normal Width',
@@ -263,4 +263,4 @@ function restimo_register_meta_boxes( $meta_boxes ) {
 	return $meta_boxes;
 }
 
-add_filter( 'rwmb_meta_boxes', 'restimo_register_meta_boxes' );
+add_filter( 'rwmb_meta_boxes', 'creampoint_register_meta_boxes' );

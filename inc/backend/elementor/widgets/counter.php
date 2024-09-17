@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measu
 /**
  * Widget Name: Counter
  */
-class Restimo_Counter extends Widget_Base{
+class CreamPoint_Counter extends Widget_Base{
 
  	// The get_name() method is a simple one, you just need to return a widget name that will be used in the code.
 	public function get_name() {
@@ -14,7 +14,7 @@ class Restimo_Counter extends Widget_Base{
 
 	// The get_title() method, which again, is a very simple one, you need to return the widget title that will be displayed as the widget label.
 	public function get_title() {
-		return __( 'XP Counter 1', 'restimo' );
+		return __( 'XP Counter 1', 'creampoint' );
 	}
 
 	// The get_icon() method, is an optional but recommended method, it lets you set the widget icon. you can use any of the eicon or font-awesome icons, simply return the class name as a string.
@@ -24,7 +24,7 @@ class Restimo_Counter extends Widget_Base{
 
 	// The get_categories method, lets you set the category of the widget, return the category name as a string.
 	public function get_categories() {
-		return [ 'category_restimo' ];
+		return [ 'category_creampoint' ];
 	}
 
 	protected function register_controls() {
@@ -32,26 +32,26 @@ class Restimo_Counter extends Widget_Base{
 		$this->start_controls_section(
 			'content_section',
 			[
-				'label' => __( 'Counter', 'restimo' ),
+				'label' => __( 'Counter', 'creampoint' ),
 			]
 		);
 		$this->add_control(
 			'pos_num',
 			[
-				'label' => __( 'Number Position', 'restimo' ),
+				'label' => __( 'Number Position', 'creampoint' ),
 				'type' => Controls_Manager::CHOOSE,
 				'default' => 'left',
 				'options' => [
 					'left' => [
-						'title' => __( 'Left', 'restimo' ),
+						'title' => __( 'Left', 'creampoint' ),
 						'icon' => 'eicon-h-align-left',
 					],
 					'top' => [
-						'title' => __( 'Top', 'restimo' ),
+						'title' => __( 'Top', 'creampoint' ),
 						'icon' => 'eicon-v-align-top',
 					],
 					'right' => [
-						'title' => __( 'Right', 'restimo' ),
+						'title' => __( 'Right', 'creampoint' ),
 						'icon' => 'eicon-h-align-right',
 					],
 				],
@@ -62,20 +62,20 @@ class Restimo_Counter extends Widget_Base{
 		$this->add_responsive_control(
 			'align',
 			[
-				'label' => __( 'Alignment', 'restimo' ),
+				'label' => __( 'Alignment', 'creampoint' ),
 				'type' => Controls_Manager::CHOOSE,
 				'default' => 'center',
 				'options' => [
 					'left'    => [
-						'title' => __( 'Left', 'restimo' ),
+						'title' => __( 'Left', 'creampoint' ),
 						'icon' => 'eicon-text-align-left',
 					],
 					'center' => [
-						'title' => __( 'Center', 'restimo' ),
+						'title' => __( 'Center', 'creampoint' ),
 						'icon' => 'eicon-text-align-center',
 					],
 					'right' => [
-						'title' => __( 'Right', 'restimo' ),
+						'title' => __( 'Right', 'creampoint' ),
 						'icon' => 'eicon-text-align-right',
 					],
 				],
@@ -91,9 +91,9 @@ class Restimo_Counter extends Widget_Base{
 		$this->add_control(
 			'title',
 			[
-				'label' => __( 'Title:', 'restimo' ),
+				'label' => __( 'Title:', 'creampoint' ),
 				'type' => Controls_Manager::TEXTAREA,
-				'default' => __( 'Current Clients', 'restimo' ),
+				'default' => __( 'Current Clients', 'creampoint' ),
 			]
 		);
 
@@ -102,23 +102,23 @@ class Restimo_Counter extends Widget_Base{
 			[
 				'label' => 'Number:',
 				'type' => Controls_Manager::TEXT,
-				'default' => __( '180', 'restimo' ),
+				'default' => __( '180', 'creampoint' ),
 			]
 		);
 
 		$this->add_control(
 			'after_number',
 			[
-				'label' => __( 'After Number:', 'restimo' ),
+				'label' => __( 'After Number:', 'creampoint' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => __( '', 'restimo' ),
+				'default' => __( '', 'creampoint' ),
 			]
 		);		
 
 		$this->add_control(
 			'time',
 			[
-				'label' => __( 'Duration', 'restimo' ),
+				'label' => __( 'Duration', 'creampoint' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -141,7 +141,7 @@ class Restimo_Counter extends Widget_Base{
 		$this->start_controls_section(
 			'style_content_section',
 			[
-				'label' => __( 'Style', 'restimo' ),
+				'label' => __( 'Style', 'creampoint' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -150,7 +150,7 @@ class Restimo_Counter extends Widget_Base{
 		$this->add_control(
 			'heading_number',
 			[
-				'label' => __( 'Number', 'restimo' ),
+				'label' => __( 'Number', 'creampoint' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -158,7 +158,7 @@ class Restimo_Counter extends Widget_Base{
 		$this->add_control(
 			'number_color',
 			[
-				'label' => __( 'Color', 'restimo' ),
+				'label' => __( 'Color', 'creampoint' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -178,7 +178,7 @@ class Restimo_Counter extends Widget_Base{
 		$this->add_control(
 			'heading_title',
 			[
-				'label' => __( 'Title', 'restimo' ),
+				'label' => __( 'Title', 'creampoint' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -186,7 +186,7 @@ class Restimo_Counter extends Widget_Base{
 		$this->add_responsive_control(
 			'title_space',
 			[
-				'label' => __( 'Spacing', 'restimo' ),
+				'label' => __( 'Spacing', 'creampoint' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -204,7 +204,7 @@ class Restimo_Counter extends Widget_Base{
 		$this->add_control(
 			'title_color',
 			[
-				'label' => __( 'Color', 'restimo' ),
+				'label' => __( 'Color', 'creampoint' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -240,5 +240,5 @@ class Restimo_Counter extends Widget_Base{
 		return [ 'funfact', 'number' ];
 	}
 }
-// After the Restimo_Counter class is defined, I must register the new widget class with Elementor:
-Plugin::instance()->widgets_manager->register( new Restimo_Counter() );
+// After the CreamPoint_Counter class is defined, I must register the new widget class with Elementor:
+Plugin::instance()->widgets_manager->register( new CreamPoint_Counter() );

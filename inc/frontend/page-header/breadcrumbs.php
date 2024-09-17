@@ -1,7 +1,7 @@
 <?php
 // Breadcrumbs
-if ( ! function_exists( 'restimo_get_breadcrumbs' ) ) {
-    function restimo_get_breadcrumbs ( 
+if ( ! function_exists( 'creampoint_get_breadcrumbs' ) ) {
+    function creampoint_get_breadcrumbs ( 
         $list_style = 'ul', 
         $list_id = 'breadcrumbs', 
         $list_class = 'breadcrumbs none-style',
@@ -11,9 +11,9 @@ if ( ! function_exists( 'restimo_get_breadcrumbs' ) ) {
         $breadcrumb = '<' . $list_style . ' id="' . $list_id . '" class="' . $list_class . '">';
         // Front page
         if ( is_front_page() ) {
-            $breadcrumb .= '<li class="' . $active_class . '">' . esc_html__('Home', 'restimo') . '</li>'; //get_bloginfo( 'name' )
+            $breadcrumb .= '<li class="' . $active_class . '">' . esc_html__('Home', 'creampoint') . '</li>'; //get_bloginfo( 'name' )
         } else {
-            $breadcrumb .= '<li><a href="' . home_url() . '">' . esc_html__('Home', 'restimo') . '</a></li>'; //get_bloginfo( 'name' )
+            $breadcrumb .= '<li><a href="' . home_url() . '">' . esc_html__('Home', 'creampoint') . '</a></li>'; //get_bloginfo( 'name' )
         }
         // Blog archive
         if ( 'page' == get_option( 'show_on_front' ) && get_option( 'page_for_posts' ) ) {
@@ -82,11 +82,11 @@ if ( ! function_exists( 'restimo_get_breadcrumbs' ) ) {
         }
         // Search
         if ( is_search() ) {
-            $breadcrumb .= '<li class="' . $active_class . '">' . esc_html__( 'Search', 'restimo' ) . '</li>';
+            $breadcrumb .= '<li class="' . $active_class . '">' . esc_html__( 'Search', 'creampoint' ) . '</li>';
         }
         // 404
         if ( is_404() ) {
-            $breadcrumb .= '<li class="' . $active_class . '">' . esc_html__( '404', 'restimo' ) . '</li>';
+            $breadcrumb .= '<li class="' . $active_class . '">' . esc_html__( '404', 'creampoint' ) . '</li>';
         }
         // Custom Post Type Archive
         if ( is_post_type_archive() ) {
@@ -110,8 +110,8 @@ if ( ! function_exists( 'restimo_get_breadcrumbs' ) ) {
                 $cpt_obj = get_post_type_object( $post_type );
                 if ( ! $output && get_post_type_archive_link( $cpt_obj->name ) ) {
                     $archive_link = '';
-                    if ( 'xp_portfolio' == get_post_type() && restimo_get_option('portfolio_archive') == 'archive_custom' ) {
-                        $archive_link = get_page_link( restimo_get_option('archive_page_custom') );                                
+                    if ( 'xp_portfolio' == get_post_type() && creampoint_get_option('portfolio_archive') == 'archive_custom' ) {
+                        $archive_link = get_page_link( creampoint_get_option('archive_page_custom') );                                
                     } else {
                         $archive_link = get_post_type_archive_link( $cpt_obj->name );
                     }
@@ -131,8 +131,8 @@ if ( ! function_exists( 'restimo_get_breadcrumbs' ) ) {
             if ( get_post_type_archive_link( $cpt_obj->name ) ) {
                 // Custom portfolio archive page link
                 $archive_link = '';
-                if ( 'xp_portfolio' == get_post_type() && restimo_get_option('portfolio_archive') == 'archive_custom' ) {
-                    $archive_link = get_page_link( restimo_get_option('archive_page_custom') );                                
+                if ( 'xp_portfolio' == get_post_type() && creampoint_get_option('portfolio_archive') == 'archive_custom' ) {
+                    $archive_link = get_page_link( creampoint_get_option('archive_page_custom') );                                
                 } else {
                     $archive_link = get_post_type_archive_link( $cpt_obj->name );
                 }
@@ -190,10 +190,10 @@ if ( ! function_exists( 'restimo_get_breadcrumbs' ) ) {
     }
 }
 
-if ( ! function_exists( 'restimo_breadcrumbs' ) ) {
-    function restimo_breadcrumbs (){
+if ( ! function_exists( 'creampoint_breadcrumbs' ) ) {
+    function creampoint_breadcrumbs (){
 
-        if( restimo_get_option('breadcrumbs') && !is_front_page() ){ echo restimo_get_breadcrumbs(); } ?>
+        if( creampoint_get_option('breadcrumbs') && !is_front_page() ){ echo creampoint_get_breadcrumbs(); } ?>
     
         <?php
     }

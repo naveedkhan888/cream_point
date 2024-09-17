@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package Restimo
+ * @package CreamPoint
  */
 
 ?>
@@ -31,4 +31,4 @@
 } ?>
 <!-- #site-content-open -->
 <div id="content" class="site-content">
-	<?php restimo_page_header(); ?>
+	<?php creampoint_page_header(); ?>

@@ -1,16 +1,16 @@
 <?php 
 
 //Custom Style Frontend
-if(!function_exists('restimo_color_scheme')){
-    function restimo_color_scheme(){
+if(!function_exists('creampoint_color_scheme')){
+    function creampoint_color_scheme(){
 	  	$color_scheme = '';
 
 	  	//Heading Color
-	  	if( restimo_get_option('heading_color') != '#1a1b1e' ){
+	  	if( creampoint_get_option('heading_color') != '#1a1b1e' ){
 			$color_scheme = 
 			'
 			/****Heading Color****/
-			a { color: '.restimo_get_option('heading_color').';}
+			a { color: '.creampoint_get_option('heading_color').';}
 			.icon-box .title-box a,
 			.xp-switcher > span,
 			.woocommerce table.shop_table,
@@ -33,7 +33,7 @@ if(!function_exists('restimo_color_scheme')){
 			h3,
 			h4,
 			h5,
-			h6{ color: '.restimo_get_option('heading_color').';}
+			h6{ color: '.creampoint_get_option('heading_color').';}
 				';
 		}
 
@@ -42,7 +42,7 @@ if(!function_exists('restimo_color_scheme')){
 		}
 
 		//Button Hover and Dark Color
-	  	if( restimo_get_option('btn_hover_dark') != '#eac76f' ){
+	  	if( creampoint_get_option('btn_hover_dark') != '#eac76f' ){
 			$color_scheme = 
 			'
 			/****Secondary Color****/
@@ -62,7 +62,7 @@ if(!function_exists('restimo_color_scheme')){
 			.xptf-btn:hover,
 			.woocommerce ul.products li.product .add_to_cart_button:hover,
 			.woocommerce-page ul.products li.product .add_to_cart_button:hover,
-			.xptf-btn:focus{ background: '.restimo_get_option('btn_hover_dark').';}
+			.xptf-btn:focus{ background: '.creampoint_get_option('btn_hover_dark').';}
 				';
 		}
 
@@ -73,7 +73,7 @@ if(!function_exists('restimo_color_scheme')){
 
 
 	  	//Main Color
-	  	if( restimo_get_option('main_color') != '#fd85b2' ){
+	  	if( creampoint_get_option('main_color') != '#fd85b2' ){
 			$color_scheme = 
 			'
 		  	/****Main Color****/
@@ -127,21 +127,21 @@ if(!function_exists('restimo_color_scheme')){
 			.woocommerce #respond input#submit.alt, .woocommerce a.button.alt,.woocommerce button.button.alt, .woocommerce input.button.alt,.woocommerce #respond input#submit, .woocommerce a.button,.woocommerce input.button, .woocommerce button.button.alt.disabled,
 			.woocommerce button.button,
 			.woocommerce-mini-cart__buttons a.button.wc-forward,
-			.woocommerce-mini-cart__buttons a.button.wc-forward:hover{ background: '.restimo_get_option('main_color').'; }
+			.woocommerce-mini-cart__buttons a.button.wc-forward:hover{ background: '.creampoint_get_option('main_color').'; }
 			.tab-titles .title-item a.tab-active,
 			.tab-titles .title-item a:hover,
 			.slide-rev-subtitle {
-				background: '.restimo_get_option('main_color').' !important;
+				background: '.creampoint_get_option('main_color').' !important;
 			}
 			.post-box .entry-meta .btn-details:hover, 
 			.widget .tagcloud a:hover,
-			.icon-box-1 .icon-main{background: '.hex2rgba(restimo_get_option('main_color'), 0.1).';}
-			.team-3 .team-thumb a:before{background: '.hex2rgba(restimo_get_option('main_color'), 0.8).';}
+			.icon-box-1 .icon-main{background: '.hex2rgba(creampoint_get_option('main_color'), 0.1).';}
+			.team-3 .team-thumb a:before{background: '.hex2rgba(creampoint_get_option('main_color'), 0.8).';}
 			.projects-grid .projects-box .portfolio-info,
-			.projects-grid.style-3 .projects-thumbnail .overlay{background: '.hex2rgba(restimo_get_option('main_color'), 0.9).';}
+			.projects-grid.style-3 .projects-thumbnail .overlay{background: '.hex2rgba(creampoint_get_option('main_color'), 0.9).';}
 
 			/*Background Image*/
-			.author-widget_wrapper:before{ background-image: linear-gradient(230deg, '.restimo_get_option('main_color').' -150%, #fff 80%); }
+			.author-widget_wrapper:before{ background-image: linear-gradient(230deg, '.creampoint_get_option('main_color').' -150%, #fff 80%); }
 
 			/*Border Color*/
 			.xptf-btn.xptf-btn-border,
@@ -157,11 +157,11 @@ if(!function_exists('restimo_color_scheme')){
 			.xp-tabs .tab-link.current, .xp-tabs .tab-link:hover,
 			.xp-video-button a:hover span,
 			.woocommerce div.product .woocommerce-tabs ul.tabs li a:hover,
-			.woocommerce div.product .woocommerce-tabs ul.tabs li.active a{ border-color: '.restimo_get_option('main_color').'; }
+			.woocommerce div.product .woocommerce-tabs ul.tabs li.active a{ border-color: '.creampoint_get_option('main_color').'; }
 
 			/*Border Top Color*/
 			.woocommerce-message,
-			.woocommerce-info{ border-top-color: '.restimo_get_option('main_color').'; }
+			.woocommerce-info{ border-top-color: '.creampoint_get_option('main_color').'; }
 
 			/*Color*/
 			blockquote:before,
@@ -224,30 +224,30 @@ if(!function_exists('restimo_color_scheme')){
 			.elementor-widget-icon.elementor-view-framed .elementor-icon,
 			.elementor-widget-icon.elementor-view-default .elementor-icon,
 			.xp-counter-2.icounter .c-number.font-second span.num + span,
-			.woocommerce div.product p.price,.woocommerce div.product span.price{ color: '.restimo_get_option('main_color').'; }
+			.woocommerce div.product p.price,.woocommerce div.product span.price{ color: '.creampoint_get_option('main_color').'; }
 
 			.main-navigation > ul > li:hover > a,
 			.main-navigation ul li li a:hover,.main-navigation ul ul.sub-menu li.current-menu-item > a,.main-navigation ul ul.sub-menu li.current-menu-ancestor > a,
 			.main-navigation ul > li.menu-item-has-children:hover > a,
 			.main-navigation ul > li.menu-item-has-children:hover > a:after,
 			.main-navigation ul > li.menu-item-has-children > a:hover:after{
-				color:'.restimo_get_option('main_color').' !important;
+				color:'.creampoint_get_option('main_color').' !important;
 			}
 
 			/*Other*/
 			.border_clr.elementor-widget-divider.elementor-view-framed .elementor-icon, 
 			.border_clr.elementor-widget-divider.elementor-view-default .elementor-icon svg {
-			  fill: '.restimo_get_option('main_color').';
+			  fill: '.creampoint_get_option('main_color').';
 			}
 			.border_clr.elementor-widget-divider.elementor-view-framed .elementor-icon, 
 			.border_clr.elementor-widget-divider.elementor-view-default .elementor-icon {
-			  color: '.restimo_get_option('main_color').';
+			  color: '.creampoint_get_option('main_color').';
 			}
 			.border_clr.elementor-widget-divider {
-			  --divider-color: '.restimo_get_option('main_color').'; }
+			  --divider-color: '.creampoint_get_option('main_color').'; }
 			.icon-box .icon-main svg,
 			.icon-box-grid .icon-box .icon-main svg,
-			.xp-counter-2 svg{ fill: '.restimo_get_option('main_color').'; }
+			.xp-counter-2 svg{ fill: '.creampoint_get_option('main_color').'; }
 				';
 		}
 
@@ -258,12 +258,12 @@ if(!function_exists('restimo_color_scheme')){
 
     }
 }
-add_action('wp_head', 'restimo_color_scheme');
+add_action('wp_head', 'creampoint_color_scheme');
 
 //Custom Second Font
-if(!function_exists('restimo_second_font')){
-	function restimo_second_font(){
-		$second_font = restimo_get_option( 'second_font', [] );
+if(!function_exists('creampoint_second_font')){
+	function creampoint_second_font(){
+		$second_font = creampoint_get_option( 'second_font', [] );
 		$data_font = '';
 
 		if ( is_array($second_font) && !empty($second_font['font-family']) && $second_font['font-family'] != 'Merienda' ) {
@@ -336,4 +336,4 @@ if(!function_exists('restimo_second_font')){
 		}
 	}
 }
-add_action('wp_head', 'restimo_second_font');
+add_action('wp_head', 'creampoint_second_font');

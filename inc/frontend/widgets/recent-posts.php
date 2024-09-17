@@ -1,6 +1,6 @@
 <?php 
 
-class restimo_recent_news extends WP_Widget {
+class creampoint_recent_news extends WP_Widget {
 
     function __construct() {
 
@@ -9,10 +9,10 @@ class restimo_recent_news extends WP_Widget {
             'recent_news', 
 
             // Widget name will appear in UI
-            esc_html__('XP Recent Posts', 'restimo'), 
+            esc_html__('XP Recent Posts', 'creampoint'), 
 
             // Widget description
-            array( 'description' => esc_html__( 'XP Recent Posts', 'restimo' ), ) 
+            array( 'description' => esc_html__( 'XP Recent Posts', 'creampoint' ), ) 
         );
     }
 
@@ -24,7 +24,7 @@ class restimo_recent_news extends WP_Widget {
 
     	//$title = apply_filters( 'widget_title', $instance['title'] );
 
-        $title = apply_filters( 'widget_title', empty( $instance['title'] ) ? esc_html__( 'Latest News', 'restimo' ) : $instance['title'], $instance, $this->id_base );
+        $title = apply_filters( 'widget_title', empty( $instance['title'] ) ? esc_html__( 'Latest News', 'creampoint' ) : $instance['title'], $instance, $this->id_base );
 
     	$date = ! empty( $instance['count'] ) ? '1' : '0';
 
@@ -71,7 +71,7 @@ class restimo_recent_news extends WP_Widget {
                 <?php
                     $post_title   = get_the_title( $recent_post->ID );
                     $post_thumb   = get_the_post_thumbnail( $recent_post->ID, 'thumbnail' );
-                    $title        = ( ! empty( $post_title ) ) ? $post_title : __( '(no title)', 'restimo' );
+                    $title        = ( ! empty( $post_title ) ) ? $post_title : __( '(no title)', 'creampoint' );
                 ?>
                 <li class="clearfix"> 
                     <?php if( $post_thumb ) { ?>
@@ -121,7 +121,7 @@ class restimo_recent_news extends WP_Widget {
 
     // Check values
 
-    	 $title = isset( $instance['title'] ) ? $instance['title'] : esc_html( 'Latest News', 'restimo' );
+    	 $title = isset( $instance['title'] ) ? $instance['title'] : esc_html( 'Latest News', 'creampoint' );
 
     	 $count = isset($instance['count']) ? (bool) $instance['count'] :false;
 
@@ -132,13 +132,13 @@ class restimo_recent_news extends WP_Widget {
     ?>
 
     <p>
-        <label><?php esc_html_e( 'Title:', 'restimo' ); ?></label>
+        <label><?php esc_html_e( 'Title:', 'creampoint' ); ?></label>
 
         <input class="widefat" id="<?php echo esc_attr($this->get_field_id('title')); ?>" name="<?php echo esc_attr($this->get_field_name('title')); ?>" type="text" value="<?php echo esc_attr($title); ?>" />
     </p>
     <p>
 
-        <label><?php esc_html_e( 'Number of posts to show:', 'restimo' ); ?></label> 
+        <label><?php esc_html_e( 'Number of posts to show:', 'creampoint' ); ?></label> 
 
         <input size="3" class="widefat" id="<?php echo esc_attr($this->get_field_id('posts_per_page')); ?>" name="<?php echo esc_attr($this->get_field_name('posts_per_page')); ?>" type="text" value="<?php echo esc_attr($posts_per_page); ?>" />
         <br />
@@ -147,7 +147,7 @@ class restimo_recent_news extends WP_Widget {
         <label>
             <input type="checkbox" class="checkbox" id="<?php echo esc_attr($this->get_field_id('count')); ?>" name="<?php echo esc_attr($this->get_field_name('count')); ?>"<?php checked( $count ); ?> />
 
-            <?php esc_html_e( 'Show date time', 'restimo' ); ?>
+            <?php esc_html_e( 'Show date time', 'creampoint' ); ?>
         </label>
     </p>
 

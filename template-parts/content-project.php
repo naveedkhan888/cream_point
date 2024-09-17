@@ -13,7 +13,7 @@
 			<a href="<?php the_permalink(); ?>">
 				<?php
 					if ( has_post_thumbnail() ) {
-						the_post_thumbnail( 'restimo-portfolio-thumbnail-grid' );
+						the_post_thumbnail( 'creampoint-portfolio-thumbnail-grid' );
 					}
 				?>
 			</a>
