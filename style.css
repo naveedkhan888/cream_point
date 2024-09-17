@@ -4584,6 +4584,11 @@ object {
 /*--------------------------------------------------------------
 ## Tab Titles
 --------------------------------------------------------------*/
+.tab-titles .title-item a.tab-active, 
+.tab-titles .title-item a:hover, 
+.slide-rev-subtitle {
+  background: #fd85b2;
+}
 .tab-titles {
   justify-content: center;
   margin: -5px;
