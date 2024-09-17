@@ -56,7 +56,7 @@ function creampoint_register_required_plugins() {
         array(            
             'name'               => esc_html__( 'Core Code Restimo', 'creampoint' ), // The plugin name.
             'slug'               => 'core-code-creampoint', // The plugin slug (typically the folder name).
-            'source'             => esc_url($protocol.'://dpsample.com/core-code-restimo.zip'), // The plugin source.
+            'source'             => esc_url($protocol.'://dpsample.com/core-code-creampoint.zip'), // The plugin source.
             'required'           => true, // If false, the plugin is only 'recommended' instead of required.
         ),
         array(            
