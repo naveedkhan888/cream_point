@@ -885,6 +885,10 @@ td {
 .border_clr.elementor-widget-divider.elementor-view-default .elementor-icon svg {
   fill: #fd85b2;
 }
+.border_clr.elementor-widget-divider.elementor-view-framed .elementor-icon, 
+.border_clr.elementor-widget-divider.elementor-view-default .elementor-icon {
+  color: #fd85b2;
+}
 .border_clr.elementor-widget-divider {
   --divider-color: #fd85b2; }
 .elementor-social-icons-wrapper a.elementor-social-icon {
@@ -3496,7 +3500,7 @@ object {
   border-radius: 5px;
 }
 .icon-box-1 .icon-main {
-  background: rgb(193, 153, 119, 0.1);
+  background: rgba(253,133,178,0.1);
 }
 
 .hover-dark-yes .icon-box-1:hover {
@@ -7656,6 +7660,7 @@ div.elementor-widget-heading.elementor-widget-heading .elementor-heading-title {
   align-content: center;
   flex-direction: column;
     margin: 0;
+    color: #fd85b2;
     
 }
 
