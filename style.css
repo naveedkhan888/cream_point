@@ -7665,8 +7665,10 @@ div.elementor-widget-heading.elementor-widget-heading .elementor-heading-title {
   align-content: center;
   flex-direction: column;
     margin: 0;
-    color: #fd85b2;
     
+}
+.food-price-menu .title_priccce .price {
+  color: #fd85b2;
 }
 
 /* Description styling */
