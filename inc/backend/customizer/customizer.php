@@ -1101,7 +1101,7 @@ function restimo_customize_settings() {
             'type'     => 'color',
             'label'    => esc_html__( 'Button Hover & Dark', 'restimo' ),
             'section'  => 'color_scheme',
-            'default'  => '#1a1b1e',
+            'default'  => '#eac76f',
             'priority' => 10,
         ),
 
