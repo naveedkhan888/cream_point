@@ -4587,7 +4587,7 @@ object {
 .tab-titles .title-item a.tab-active, 
 .tab-titles .title-item a:hover, 
 .slide-rev-subtitle {
-  background: #fd85b2;
+  background: #fd85b2 !important;
 }
 .tab-titles {
   justify-content: center;
