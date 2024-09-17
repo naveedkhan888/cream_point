@@ -42,7 +42,7 @@ if(!function_exists('restimo_color_scheme')){
 		}
 
 		//Button Hover and Dark Color
-	  	if( restimo_get_option('btn_hover_dark') != '#1a1b1e' ){
+	  	if( restimo_get_option('btn_hover_dark') != '#eac76f' ){
 			$color_scheme = 
 			'
 			/****Secondary Color****/
