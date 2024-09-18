@@ -3530,7 +3530,7 @@ object {
   height: 119px;
   left: -15px;
   top: -15px;
-  border: 1px solid rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(253, 133, 178, 0.2);
   -webkit-animation: circle_animation 2s infinite linear;
   -moz-animation: circle_animation 2s infinite linear;
   -o-animation: circle_animation 2s infinite linear;
@@ -3547,7 +3547,7 @@ object {
   content: "";
   width: 12px;
   height: 12px;
-  background: #1a1b1e;
+  background: #fd85b2;
   position: absolute;
   z-index: 1;
   top: 50%;

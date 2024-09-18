@@ -159,6 +159,8 @@ if(!function_exists('creampoint_color_scheme')){
 			.woocommerce div.product .woocommerce-tabs ul.tabs li a:hover,
 			.woocommerce div.product .woocommerce-tabs ul.tabs li.active a{ border-color: '.creampoint_get_option('main_color').'; }
 
+			.with-border-yes .icon-main .circle-animate{ border-color: '.hex2rgba(creampoint_get_option('main_color'), 0.2).'; }
+
 			/*Border Top Color*/
 			.woocommerce-message,
 			.woocommerce-info{ border-top-color: '.creampoint_get_option('main_color').'; }
