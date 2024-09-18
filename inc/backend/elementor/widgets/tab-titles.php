@@ -5,9 +5,9 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measu
 /**
  * Widget Name: Tab Titles
  */
-class CreamPoint_Tab_Titles extends Widget_Base{
+class CreamPoint_Tab_Titles extends Widget_Base {
 
- 	// The get_name() method is a simple one, you just need to return a widget name that will be used in the code.
+	// The get_name() method is a simple one, you just need to return a widget name that will be used in the code.
 	public function get_name() {
 		return 'itabtitle';
 	}
@@ -55,6 +55,19 @@ class CreamPoint_Tab_Titles extends Widget_Base{
 			]
 		);
 
+		// Add icon control to the repeater
+		$repeater->add_control(
+			'icon',
+			[
+				'label' => __( 'Icon', 'creampoint' ),
+				'type' => Controls_Manager::ICONS,
+				'default' => [
+					'value' => 'fas fa-star',
+					'library' => 'fa-solid',
+				],
+			]
+		);
+
 		$this->add_control(
 		    'title_boxes',
 		    [
@@ -92,7 +105,7 @@ class CreamPoint_Tab_Titles extends Widget_Base{
 
 		$this->end_controls_section();
 
-		//Styling
+		// Styling Section
 		$this->start_controls_section(
 			'style_section',
 			[
@@ -229,6 +242,11 @@ class CreamPoint_Tab_Titles extends Widget_Base{
 			<?php foreach ( $settings['title_boxes'] as $box ) : ?>
 			<div class="title-item font-second">
 				<a href="<?php echo esc_url( $box['title_link'] ); ?>">
+				    <?php if ( ! empty( $box['icon']['value'] ) ) : ?>
+				        <span class="icon">
+				            <?php Icons_Manager::render_icon( $box['icon'], [ 'aria-hidden' => 'true' ] ); ?>
+				        </span>
+				    <?php endif; ?>
 				    <?php echo esc_html( $box['titles'] ); ?>
 				</a>
 			</div>
