@@ -4584,6 +4584,9 @@ object {
 /*--------------------------------------------------------------
 ## Tab Titles
 --------------------------------------------------------------*/
+.tab-titles .title-item a .icon i {
+  font-size: 52px;
+}
 .tab-titles .title-item a.tab-active, 
 .tab-titles .title-item a:hover, 
 .slide-rev-subtitle {
@@ -4603,17 +4606,18 @@ object {
   display: inline-block;
   vertical-align: middle;
   margin: 5px;
-  min-width: 200px;
   text-align: center;
 }
 .tab-titles .title-item a {
-  display: block;
   color: #fff;
-  padding: 17px;
+  padding: 15px 30px;
   background: rgba(27, 29, 33, 0.2);
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
-  border-radius: 3px;
+  border-radius: 15px;
+  display: flex;
+  gap: 3px;
+  flex-direction: column;
 }
 .tab-titles .title-item a.tab-active,
 .tab-titles .title-item a:hover {
